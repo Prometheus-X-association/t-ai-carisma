@@ -1,3 +1,3 @@
-# README : Trustworthy AI Algorithms Assessment READ-ME
+# Trustworthy AI: algorithm assessment BB
 
-(to do)
+See the documentation [here](docs/).
