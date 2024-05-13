@@ -9,3 +9,5 @@ These two platforms are described respectively :
 
 - LORIA's LOLA platform : [here](https://github.com/Prometheus-X-association/t-ai/blob/loria/README.md)
 - AffectLog AfectLog360 platform: [here](https://github.com/Prometheus-X-association/t-ai/blob/AffectLog360-dd/README.md)
+
+This approach is supplemented by an implementation of automated analysis of software models and AI trustworthiness indicators with respect to the aspects explainability, data security, privacy, and fairness developed by Fraunhofer ISST and University of Koblenz.
