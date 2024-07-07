@@ -4,9 +4,9 @@ This part must be rewritten.
 
 Here are followig the links to design documents :
 
-- [LORIA's LOLA platform] (docs/loria/design-document-LORIA.md)
+- [LORIA's LOLA platform](docs/loria/design-document-LORIA.md)
 - [AffectLog AffectLog360 platform](docs/affectlog/design-document-AffectLog.markdown)
-- [UoK Carisma platform](docs/affectlog/ddesign-document-carisma.markdown)
+- [UoK Carisma platform](docs/affectlog/design-document-carisma.markdown)
 
 
 
