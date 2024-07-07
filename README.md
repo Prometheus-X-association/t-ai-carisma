@@ -6,7 +6,7 @@ Here are followig the links to design documents :
 
 - [LORIA's LOLA platform](docs/lola/design-document-LORIA.md)
 - [AffectLog's AffectLog360 platform](docs/affectlog/design-document-AffectLog.markdown)
-- [UoK's Carisma platform](docs/carisma/design-document-carisma.markdown)
+- [UoK's Carisma platform](docs/carisma/design-document-carisma.md)
 
 
 
