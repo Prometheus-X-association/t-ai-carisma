@@ -1,3 +1,4 @@
 # Trustworthy AI: algorithm assessment BB
 
-See the design document overview [here](docs/README.md).
+See the design document overview [here](docs/).
+
