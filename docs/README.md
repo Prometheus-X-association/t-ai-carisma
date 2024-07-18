@@ -6,7 +6,7 @@ Here are following the links to design documents :
 
 - [LORIA's LOLA platform](lola/design-document-LORIA.md)
 - [AffectLog's AffectLog360 platform](affectlog/design-document-AffectLog.markdown)
-- [University of Koblenz's CARiSMA platform](carisma/design-document-carisma.md)
+- [University of Koblenz's CARiSMA platform](carisma/README.md)
 
 <!--In the dynamic world of AI, LORIA and Affectlog's Trustworthy AI Assessment initiative is central to fostering trust and transparency. This program integrates two sophisticated and complementary platforms — LORIA's audit platform for data and algorithms and Affectlog's safety assessment platform. 
 
