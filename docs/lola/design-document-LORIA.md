@@ -56,7 +56,7 @@ Here is the use case diagram for this step.
 Some comments:
 
 - There are 5 type of user profile (or role)
-	1.	basic pofile that permit to acces to public contents
+	1.	basic profile that permit to access to public contents
 	2. for a private use of platform (private dataset and scenario)
 	3. for users who wish to open their dataset to third-party algorithms
 	4. for users who wish to audit or challenge their algorithms on data linked to one or more scenarios
@@ -71,9 +71,9 @@ Here is the use case diagram for the dataset sharing activity.
 
 Some comments:
 
-- Dataset are mainly learning traces generated from learning platform and formated in xAPI standard.
+- Dataset are mainly learning traces generated from learning platform and formatted in xAPI standard.
 - Metadata could be described on the xAPI profile server [xAPI profile server ](https://profiles.adlnet.gov/profiles) 
-- For the upload task, a dedicated utility we developed could be used for a secured tranfer (it uses the sFTP protocol).
+- For the upload task, a dedicated utility we developed could be used for a secured transfer (it uses the sFTP protocol).
 
 **Auditing an algorithm**
 
@@ -103,7 +103,7 @@ Some comments:
 - Experimental protocol could be designed as a process model
 - The protocol is then implemented in *NextFlow* script(see [https://www.nextflow.io/](https://www.nextflow.io/)).
 - The workflow is tested on a (open) baseline algorithm.
-- Then the scenario could be uploded to the platform.
+- Then the scenario could be uploaded to the platform.
 - The configuration phase defines the association the scenario to existing datasets.
 
 ## Requirements
@@ -129,9 +129,9 @@ To achieve this task, we require the use of commons standards:
 
 - for the data format, the standard adopted is [IEEE/xAPI](https://opensource.ieee.org/xapi)
 - for the metadata format, the format adopted is [JSON-LD](https://json-ld.org/)
-- for the metadata sharing, we recommand
+- for the metadata sharing, we recommend
 [xAPI profile server ](https://profiles.adlnet.gov/profiles)
-- for the data tranfer, we used the sFTP protocol
+- for the data transfer, we used the sFTP protocol
 
 
 ## Relevant Standards
@@ -142,15 +142,15 @@ To achieve this task, we require the use of commons standards:
 
 - Metadata format : [JSON-LD](https://json-ld.org/) and displayable/editable on public [xAPI profile server ](https://profiles.adlnet.gov/profiles)
 
-- Data transfert: sFTP protocol
-- Algorithm format: Containers technologie (Docker & docker-compose)
-- Algorithm transfert and store: Private docker repository
+- Data transfer: sFTP protocol
+- Algorithm format: Containers technology (Docker & docker-compose)
+- Algorithm transfer and store: Private docker repository
 - Scenario format : Data-driven computational pipelines [NextFlow](https://www.nextflow.io/)
 
 
-##Input / Output Data
+## Input / Output Data
 
-As explained above, thera are several type of interactions with the platform, namely Dataset deposit, Algorithm sending, Scenario design and Scenario exécution.
+As explained above, there are several type of interactions with the platform, namely Dataset deposit, Algorithm sending, Scenario design and Scenario execution.
 
 The execution of a scenario is the final objective which allows obtaining an assessment.
 
@@ -160,43 +160,51 @@ The result is then the evaluation which is presented in the form of indicators a
 The output format is a JSON file.
 
 
-##Architecture
+## Architecture
 
 The following diagram presents a general view of the secure architecture of the platform.
 
-![LORIA's LOLA platform arctitecture ](img/LOLA-arch_harbor.jpg)
+![LORIA's LOLA platform architecture ](img/LOLA-arch_harbor.jpg)
 
 
 
-##Dynamic Behaviour
+## Dynamic Behavior
 
 Here are the sequence diagrams corresponding to the main activities.
 
-###Send Dataset
+### Send Dataset
 
 ![Store dataset](diagrams/LOLA_version_anglaise-Upload&Install_dataset.drawio.svg)
 
-###Upload Algorithm
+### Upload Algorithm
 
 ![Store dataset](diagrams/LOLA_version_anglaise-Upload&Install_algorithm.drawio.svg)
 
 
-###Prepare a scenario
+### Prepare a scenario
 
 ![Store dataset](diagrams/LOLA_version_anglaise-scenario_creation.drawio.svg)
 
 
-###Execute a scenario
+### Execute a scenario
 
 ![Store dataset](diagrams/LOLA_version_anglaise-scenario_execution.drawio.svg)
 
 ## Configuration and deployment settings
 
-_What configuration options does this BB have?
+<!-- _What configuration options does this BB have?
 What is the configuration format?
 Provide examples.
-How is the component logging the operations? What are the error scenarios? What are the limits in terms of usage (e.g. number of requests, size of dataset, etc.)?_
+How is the component logging the operations? What are the error scenarios? What are the limits in terms of usage (e.g. number of requests, size of dataset, etc.)?_-->
+### Configuration and logging
 
+The configuration of the LOLA platform mainly rely on networking and data transfer protocols configurations. 
+
+The main component of the platform is the Python wrapper used to coordinate the other components of the application. It uses logging methods accessible via API requests.
+
+### Error Scenarios
+
+Limits will come from the networking environment and the infrastructure used to run the application. Note that the LRS used in the application might be particularly resource consuming, and thus proper resource allocation should be highly considered.
 
 ## Third Party Components & Licenses
 
@@ -204,15 +212,17 @@ How is the component logging the operations? What are the error scenarios? What 
 | --- | --- | --- |
 | Nextflow | Apache 2.0 | [https://www.nextflow.io/docs/latest/index.html](https://www.nextflow.io/docs/latest/index.html) |
 | TRAX 1.0 | EUPL 1.2 | [https://github.com/trax-project/trax-lrs](https://github.com/trax-project/trax-lrs) |
-
+| Docker | Apache 2.0 | [https://www.docker.com](https://www.docker.com) |
+| Slurm | GNU General Public License | [https://slurm.schedmd.com](https://slurm.schedmd.com) |
 
 
 
 ## Implementation Details
 
-_This is optional: remove this heading if not needed.
-You can add details about implementation plans and lower-level design here._
+<!--_This is optional: remove this heading if not needed.
+You can add details about implementation plans and lower-level design here._-->
 
+As the LOLA platform uses various components, we introduced a Python wrapper to centralize and enhance ease of use of the different services. We defined an API that communicate with a web application in order to use the services inside LOLA. 
 
 ## OpenAPI Specification
 
@@ -220,31 +230,38 @@ _In the future: link your OpenAPI spec here._
 
 ## Test specification
 
-_Test definitions and testing environment should be availaible, and the tests should be repeatable._
+<!--_Test definitions and testing environment should be available, and the tests should be repeatable._-->
 
 ### Test plan
 
-_Testing strategy, tools and methods chosen, methods for acceptance criteria.
-To be detailed._
+<!--_Testing strategy, tools and methods chosen, methods for acceptance criteria.
+To be detailed._-->
+
+LOLA platform will be tested with the firstly designed scenario "Recommender Systems" in collaboration with our partner Maskott. 
 
 ### Internal unit tests
 
-_Here specify the test cases for the units inside the BB.  
-Candidates for tools that can be used to implement the test cases: JUnit, Mockito, Pytest._
+We can achieve specific unit tests with the sandbox application we provide. This sandbox is mainly used to validate scenarios and algorithm. In order to effectively do unit testing on the platform, a defined dataset as well as a specific scenario have to be created. 
 
 ### Component-level testing
 
-_Here specify how to test this component/BB as a whole. This is similar to how other BBs will use this component.  
+<!--_Here specify how to test this component/BB as a whole. This is similar to how other BBs will use this component.  
 Candidates for tools that can be used to implement the test cases: K6, Postman, stepci, Pact  
-An example tutorial is available [here](https://github.com/ftsrg-edu/swsv-labs/wiki/2b-Integration-testing)._
+An example tutorial is available [here](https://github.com/ftsrg-edu/swsv-labs/wiki/2b-Integration-testing)._-->
+
+The main component that have to be tested is the the API of the platform. It consists of a Python wrapper of the different services used in LOLA. The different API responses are available in the documentation, and might be tested with such tools as Postman.
 
 ### UI test (where relevant)
 
-_Candidates for tools that can be used to implement the test cases: Selenium_
+<!--_Candidates for tools that can be used to implement the test cases: Selenium_-->
+
+There is nothing in particular to test about LOLA's UI.
 
 ## Partners & roles
 
-_?_
+This component is a part of the building block "Trustworthy AI: Algorithm assessment" in which is designed as a toolbox of the Trustworthy AI. It is developed by LORIA and complements the tools provided by the University of Koblenz (see [Carisma](../carisma/design-document-carisma.md)) and Affectlog (see [Affectlog 360](../affectlog/design-document-AffectLog.markdown)). 
 
 ## Usage in the dataspace
-_Specify the Dataspace Enalbing Service Chain in which the BB will be used. This assumes that during development the block (lead) follows the service chain, contributes to tis detailed design and implements the block to meet the integration requirements of the chain._
+<!--_Specify the Dataspace Enabling Service Chain in which the BB will be used. This assumes that during development the block (lead) follows the service chain, contributes to tis detailed design and implements the block to meet the integration requirements of the chain._-->
+
+![Usage in dataspace](diagrams/dataspace_usage.svg)
