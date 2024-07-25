@@ -147,6 +147,13 @@ To achieve this task, we require the use of commons standards:
 - Algorithm transfer and store: Private docker repository
 - Scenario format : Data-driven computational pipelines [NextFlow](https://www.nextflow.io/)
 
+### Mapping to Data Space Reference Architecture Models
+
+DSCC : 
+
+- Data Interoperability : Data Exchange
+- Data Sovereignty and Trust : Trust Framework:
+
 
 ## Input / Output Data
 
