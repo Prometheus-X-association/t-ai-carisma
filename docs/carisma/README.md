@@ -235,7 +235,25 @@ Additional third party libraries are required by / shipped with CARiSMA:
 
 - Apache Commons Lang3: [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [xstream](https://x-stream.github.io/): [BSD 3-clause](https://x-stream.github.io/license.html)
-
+- [mxparser](https://mathparser.org/): [mXparser - LICENSE](https://mathparser.org/mxparser-license/)
+- [TXW2](https://mvnrepository.com/artifact/org.glassfish.jaxb/txw2): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [Istack Common Utility Code Runtime](https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [Angus Activation Registries](https://mvnrepository.com/artifact/org.eclipse.angus/angus-activation/1.0.0): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [OSGi Service Prefs](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.prefs): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Jakarta XML Binding API](https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [OSGi Annotation](https://mvnrepository.com/artifact/org.osgi/org.osgi.annotation): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Jakarta Activation API](https://mvnrepository.com/artifact/jakarta.activation/jakarta.activation-api): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [XML Pull Parsing API](https://mvnrepository.com/artifact/xmlpull/xmlpull): Public
+- [JAXB Runtime](https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [JAXB Core](https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-core): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
+- [Jakarta Annotations API](https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api): [EPL 2.0](https://www.eclipse.org/legal/epl-2.0/), [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)
+- [OSGi Utilities Promise](https://mvnrepository.com/artifact/org.osgi/org.osgi.util.promise): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Apache Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [OSGi Service Event](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.event): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Apache Commons Text](https://mvnrepository.com/artifact/org.apache.commons/commons-text): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [OSGi Namespace Extender](https://mvnrepository.com/artifact/org.osgi/org.osgi.namespace.extender): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Bouncy Castle ASN.1 Extension and Utility APIs](https://mvnrepository.com/artifact/org.bouncycastle/bcutil-jdk18on): [BOUNCY CASTLE LICENSE](https://www.bouncycastle.org/licence.html)
+- [OSGi Service Component](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component/1.3.0): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 ## OpenAPI Specification
 
 The component does not provide an API, since it does not receive data from other components / building blocks. All data is created manually within CARiSMA.
