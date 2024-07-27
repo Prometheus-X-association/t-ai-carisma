@@ -233,7 +233,7 @@ CARiSMA is licensed under the [Eclipse Public License v1.0](https://www.eclipse.
 
 Additional third party libraries are required by / shipped with CARiSMA:
 
-- Apache Commons Lang3: [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Apache Commons Lang3](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [xstream](https://x-stream.github.io/): [BSD 3-clause](https://x-stream.github.io/license.html)
 - [mxparser](https://mathparser.org/): [mXparser - LICENSE](https://mathparser.org/mxparser-license/)
 - [TXW2](https://mvnrepository.com/artifact/org.glassfish.jaxb/txw2): [EDL 1.0](https://www.eclipse.org/org/documents/edl-v10.php)
@@ -254,6 +254,18 @@ Additional third party libraries are required by / shipped with CARiSMA:
 - [OSGi Namespace Extender](https://mvnrepository.com/artifact/org.osgi/org.osgi.namespace.extender): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [Bouncy Castle ASN.1 Extension and Utility APIs](https://mvnrepository.com/artifact/org.bouncycastle/bcutil-jdk18on): [BOUNCY CASTLE LICENSE](https://www.bouncycastle.org/licence.html)
 - [OSGi Service Component](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component/1.3.0): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [XZ](https://mvnrepository.com/artifact/org.tukaani/xz/1.9): Public
+- [Apache Felix Maven SCR Plugin Use](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [ICU4J](https://mvnrepository.com/artifact/com.ibm.icu/icu4j): [ICU4J license](https://docs.oracle.com/cloud/latest/big-data-discovery-cloud/BDDLG/cl_icu4j_license.htm#BDDLG-concept_AB4527297161480DD261AC24135650FE)
+- [Bouncy Castle OpenPGP API](https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk18on): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), [BOUNCY CASTLE LICENSE](https://www.bouncycastle.org/licence.html)
+- [OSGi Namespace Implementation](https://mvnrepository.com/artifact/org.osgi/org.osgi.namespace.implementation): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Animal Sniffer Annotations](https://mvnrepository.com/artifact/org.codehaus.mojo/animal-sniffer-annotations): [MIT license](https://www.mojohaus.org/animal-sniffer/licenses.html)
+- [Java Native Access](https://mvnrepository.com/artifact/net.java.dev.jna/jna): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), [GNU Lesser General Public License, version 2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
+- [Jakarta Dependency Injection](https://mvnrepository.com/artifact/jakarta.inject/jakarta.inject-api): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Bouncy Castle Provider](https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk18on): [BOUNCY CASTLE LICENSE](https://www.bouncycastle.org/licence.html)
+- [OSGi Utilities Function](https://mvnrepository.com/artifact/org.osgi/org.osgi.util.function): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- [Java Native Access Platform](https://mvnrepository.com/artifact/net.java.dev.jna/jna-platform): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), [GNU Lesser General Public License, version 2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)
+- 
 ## OpenAPI Specification
 
 The component does not provide an API, since it does not receive data from other components / building blocks. All data is created manually within CARiSMA.
