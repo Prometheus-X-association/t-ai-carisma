@@ -4,7 +4,7 @@
 
 The LORIA and Affectlog solutions are complemented by [CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer)](https://github.com/CARiSMA-Tool/carisma-tool), developed by the University of Koblenz and Fraunhofer ISST. CARiSMA is a comprehensive open source software suite that enables system designers and security experts to perform automated compliance analyses, risk analyses and security analyses of software and system models. This allows users to consider security requirements early in the development process. Unified Modelling Language (UML) models are annotated with security-specific requirements that can be tailored to the users’ needs to cover a wide range of topics. Checks are performed on UML models, analyzing the models against the specified requirements and providing the user with detailed feedback on the models' compliance with the previously defined requirements.
 
-In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an AI expert uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the AI Expert to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
+In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an AI Expert (employee of AI Provider) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the AI Expert to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
 
 ![Figure 1: AI Scenario Analysis](images/AI%20Scenario%20Analysis.drawio.svg)
 
@@ -120,12 +120,12 @@ CARiSMA is beneficial for AI system users:
 
 ### Requirements
 
-- R1. CARiSMA MUST allow an AI expert to create an AI scenario model
-- R2. CARiSMA MUST allow an AI expert to analyse the AI scenario model
-- R3. CARiSMA MUST allow an AI expert to create an AI Analysis report
-- R4. CARiSMA MUST allow an AI expert to view the AI Analysis Report
-- R5. CARiSMA MUST allow an AI expert to improve the AI Analysis Report
-- R6. CARiSMA SHOULD allow an AI expert to share an AI Analysis Report with the building block "Distributed Data Visualization"
+- R1. CARiSMA MUST allow an AI Expert to create an AI scenario model
+- R2. CARiSMA MUST allow an AI Expert to analyse the AI scenario model
+- R3. CARiSMA MUST allow an AI Expert to create an AI Analysis report
+- R4. CARiSMA MUST allow an AI Expert to view the AI Analysis Report
+- R5. CARiSMA MUST allow an AI Expert to improve the AI Analysis Report
+- R6. CARiSMA SHOULD allow an AI Expert to share an AI Analysis Report with the building block "Distributed Data Visualization"
 - R7. The building block "Distributed Data Visualization SHOULD allow a user (the data subject) to view the AI Analysis Report
 
 ## Integrations
@@ -220,7 +220,7 @@ The `AnalysisHost` interface provides access to this blackboard, as well as meth
 
 The sequence diagram shows how the component communicates with other components.
 
-![Figure 9: AI expert & User Interactions](images/sequence.svg)
+![Figure 9: AI Expert & User Interactions](images/sequence.svg)
 
 ## Configuration and deployment settings
 
