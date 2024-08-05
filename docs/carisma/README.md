@@ -233,6 +233,10 @@ CARiSMA is licensed under the [Eclipse Public License v1.0](https://www.eclipse.
 
 Additional third party libraries are required by / shipped with CARiSMA:
 
+[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+  - [Apache Commons Lang3](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3), [Apache Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io), [Apache Commons Text](https://mvnrepository.com/artifact/org.apache.commons/commons-text), [Apache Felix Maven SCR Plugin Use](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html), [Jakarta Dependency Injection](https://mvnrepository.com/artifact/jakarta.inject/jakarta.inject-api), [OSGi Service Prefs](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.prefs), [OSGi Namespace Extender](https://mvnrepository.com/artifact/org.osgi/org.osgi.namespace.extender), [OSGi Service Event](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.event), [OSGi Namespace Implementation](https://mvnrepository.com/artifact/org.osgi/org.osgi.namespace.implementation), [OSGi Annotation](https://mvnrepository.com/artifact/org.osgi/org.osgi.annotation), [OSGi Utilities Function](https://mvnrepository.com/artifact/org.osgi/org.osgi.util.function), [OSGi Service Component](https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component/1.3.0), [OSGi Utilities Promise](https://mvnrepository.com/artifact/org.osgi/org.osgi.util.promise), [Java Native Access Platform](https://mvnrepository.com/artifact/net.java.dev.jna/jna-platform)
+
+
 - [Apache Commons Lang3](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [Apache Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [Apache Commons Text](https://mvnrepository.com/artifact/org.apache.commons/commons-text): [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
