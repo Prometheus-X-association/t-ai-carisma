@@ -1,133 +1,139 @@
-# AffectLog’s Trustworthy AI (ALT-AI) - Design Document
+### AffectLog's Trustworthy AI (ALT-AI) - Design Document
 
-The AffectLog’s Trustworthy AI (ALT-AI) provides a suite of tools for the explanation, visualization, and understanding of complex machine learning models. It acts as a bridge between raw model output and actionable insights, making it easier for data scientists and stakeholders to interpret model predictions, understand feature importance, and evaluate model fairness and performance across different segments. This ALT-AI BB integrates seamlessly with various machine learning frameworks, supporting a wide range of models from simple linear regressions to complex ensemble and deep learning models.
+The AffectLog's Trustworthy AI (ALT-AI) provides tools for the explanation and visualization of machine learning models, enabling data scientists and stakeholders to interpret model predictions and understand feature importance. ALT-AI integrates with popular machine learning frameworks, handling a range of models within its supported capabilities.
 
-## Technical Usage Scenarios & Features
+### Technical Usage Scenarios & Features
 
-### Features/Main Functionalities
-- **Model Explanation**: Generates explanations for predictions made by machine learning models, including global explanations that describe overall model behavior and local explanations that detail specific predictions.
-- **Feature Importance**: Quantifies the contribution of each feature to the model's predictions, enabling users to understand which features are most influential.
-- **Model Comparison**: Allows for the comparison of different models to understand which performs better and why across various metrics and data segments.
-- **Fairness Analysis**: Assesses models for fairness across different groups, helping identify and mitigate biases.
+#### Features/Main Functionalities
 
-## Technical Usage Scenarios
-- **Model Development and Validation**: Data scientists can use the ALT-AI to interpret model decisions, compare different models, and validate model performance to ensure it meets business requirements.
-- **Audit and Compliance**: In sensitive use cases, the ALT-AI can help in providing necessary documentation and explanations for model decisions, facilitating compliance with regulations like GDPR.
-- **Feature Engineering**: By understanding feature importance, data scientists can better engineer features to improve model performance.
+-   **Model Explanation:** ALT-AI generates explanations for model predictions, offering insights into how different factors contribute to specific outcomes.
+-   **Feature Importance:** It quantifies the contribution of each feature to the model's predictions, helping users understand which features are most influential.
 
-## Requirements
-- **R1**: ALT-AI MUST support integration with popular Python-based machine learning libraries such as scikit-learn, TensorFlow, and PyTorch.
-- **R2**: ALT-AI MUST provide APIs for generating model explanations, feature importance scores, and model comparisons.
-- **R3**: ALT-AI MUST ensure the privacy and security of data used for generating explanations.
-- **R4**: ALT-AI SHOULD offer high-performance computing capabilities leveraging use case partner’s infrastructure to handle large datasets and complex models efficiently.
+#### Technical Usage Scenarios
 
-## Integrations
+-   **Model Development and Validation:** Data scientists can use ALT-AI to interpret and validate model decisions within the limitations of the supported model types.
+-   **Audit and Compliance:** ALT-AI aids in providing explanations for model decisions, which can be useful in ensuring transparency and compliance with regulatory requirements.
+-   **Feature Engineering:** Insights into feature importance can help refine features to potentially improve model performance.
 
-### Direct Integrations with Other BBs
-- **Decentralized AI Training BB (#1)**: Directly integrates with model training BB to retrieve trained models for analysis.
-- **Data Value chain tracker BB (#6)**: Integrates with data value chain tracker BB to apply the same data transformations during the explanation process while also including the causal inference for individual data points.
+### Requirements
 
-### Integrations via Connector
-- **Distributed Data Visualization BB (#7)**: Integrates through connectors to distributed visualization BBs for advanced graphical representations of explanations and feature importances.
+-   **R1:** ALT-AI must support integration with Python-based machine learning libraries like scikit-learn.
+-   **R2:** ALT-AI must provide simple APIs for generating model explanations and feature importance scores.
+-   **R3:** ALT-AI must ensure the privacy and security of data used during the explanation process.
+-   **R4:** ALT-AI should be optimized for small to medium-sized datasets to ensure efficient processing within typical infrastructure constraints.
 
-## Relevant Standards
-- **Data Format Standards**: Adheres to common data exchange formats such as JSON and CSV for input and output data, ensuring compatibility with a wide range of data sources and systems.
-- **DataCards**: Used to provide metadata about datasets, enhancing transparency and accountability. Refer to Gebru et al.'s "Datasheets for Datasets" (2018) for more information.
-- **ModelCards**: Used to document machine learning models, detailing intended use, performance metrics, and ethical considerations. Refer to Mitchell et al.'s "Model Cards for Model Reporting" (2019) for more information.
-- **Security and Privacy Standards**: Ensures compliance with relevant data protection regulations (e.g., GDPR) to maintain data privacy and security.
-- **Interoperability Standards**: Follows guidelines from the Data Space Support Centre (DSSC) to ensure interoperability within data spaces, promoting seamless integration with other systems and frameworks.
+### Integrations
 
-## Input / Output Data
-- **Input Data**: Model object and test datasets in supported formats (e.g., DataFrame for Python).
-- **Output Data**: Explanation results in JSON format, including feature importance scores, prediction explanations, and fairness analysis results.
+#### Direct Integrations with Other BBs
 
-## Architecture
-The ALT-AI comprises several components:
-- **Model Adapter**: Adapts various types of machine learning models to a standardized format for analysis.
-- **Explanation Generator**: Core component that utilizes ALT-AI functions to generate explanations, feature importances, and model comparisons.
-- **Results Processor**: Formats and organizes explanation results for easy consumption and visualization.
-- **Security Layer**: Ensures data privacy and security throughout the explanation process.
+-   **Decentralized AI Training BB (#1):** ALT-AI integrates with training components to retrieve trained models for analysis.
+-   **Data Value Chain Tracker BB (#6):** Integrates with the data value chain tracker to ensure consistent data transformations during the explanation process.
+
+#### Integrations via Connector
+
+-   **Distributed Data Visualization BB (#7):** ALT-AI can be linked with visualization components to enhance the graphical representation of explanation outputs.
+
+### Relevant Standards
+
+-   **Data Format Standards:** Supports common formats like JSON and CSV for input and output to ensure compatibility with other systems.
+-   **Data Cards:** ALT-AI adheres to practices for providing metadata about datasets, enhancing transparency.
+-   **Model Cards:** ALT-AI supports the documentation of machine learning models, outlining their intended use and performance.
+-   **Security and Privacy Standards:** Ensures that data handling complies with relevant privacy and security regulations.
+
+### Mapping to Data Space Reference Architecture Models
+
+-   **DSCC:**
+    -   **Data Interoperability:** Data Exchange
+    -   **Data Sovereignty and Trust:** Trust Framework
+
+### Input / Output Data
+
+-   **Input Data:** Models and datasets should be provided in supported formats like Python DataFrames.
+-   **Output Data:** Generates explanation results, including feature importance, in JSON format.
+
+### Architecture
+
+ALT-AI includes the following components:
+
+-   **Model Adapter:** Converts machine learning models into a standardized format for analysis.
+-   **Explanation Generator:** Core component responsible for generating explanations and feature importance scores.
+-   **Results Processor:** Formats and organizes output for clear visualization and interpretation.
+-   **Security Layer:** Ensures data is handled securely throughout the process.
 
 ![Class Diagram](316105882-5b412b8b-5503-44c4-aa87-727b49acaeff.png)
 
-## Dynamic Behaviour
-Sequence diagram for generating model explanations:
+### Dynamic Behaviour
 
-1. **User Submission**: The User submits a model and data to the ModelAdapter.
-2. **Retrieval of Information**:
-   - The ModelAdapter retrieves DataCard information from the DataCard service.
-   - The ModelAdapter retrieves ModelCard information from the ModelCard service.
-3. **Adaptation**: The ModelAdapter adapts the model for the ExplanationGenerator.
-4. **Data and Model Security**: The ExplanationGenerator secures the data via the SecurityLayer.
-5. **Explanation Generation**:
-   - The ExplanationGenerator generates explanations, feature importance, and compares models.
-6. **Result Processing**: The ExplanationGenerator sends the results to the ResultsProcessor, which formats the results.
-7. **User Feedback**: The formatted results are returned to the User.
+#### Sequence Diagram for Generating Model Explanations:
+
+1.  **User Submission:** The user submits a model and dataset to the ModelAdapter.
+2.  **Model Adaptation:** The ModelAdapter standardizes the model for analysis by the Explanation Generator.
+3.  **Data Security:** The Explanation Generator ensures data security through the Security Layer.
+4.  **Explanation Generation:** The Explanation Generator produces explanations and feature importance scores.
+5.  **Result Processing:** The Results Processor formats the output.
+6.  **User Feedback:** The formatted results are provided to the user.
 
 ![Sequence Diagram](316106084-070d448d-0050-4bc8-94f4-eefc91c10128.png)
 
-## Configuration and Deployment Settings
-Configuration options include model type, explanation type (global or local), and computational resources allocation. Logging operations include tracking of explanation generation processes, error handling, and performance metrics. Error scenarios might involve unsupported model types or data formats, and insufficient computational resources for large datasets.
+### Configuration and Deployment Settings
 
-Usage limits are defined based on the computational complexity of the models being explained and the size of the dataset. For instance, a limit on the number of features or records that can be processed in a single explanation request may be set to ensure optimal performance.
+ALT-AI allows for basic configuration options, such as selecting model types and explanation methods. Logging tracks processes, errors, and performance metrics. Usage limits are set based on the complexity of models and dataset size, with a focus on ensuring efficiency and accuracy.
 
-## Third Party Components & Licenses
-- **Pandas/Numpy**: Used for data manipulation and numerical operations, both essential for processing input data and explanation results. Licensed under BSD-3-Clause.
-- **Scikit-learn/TensorFlow/PyTorch**: Integrations with these libraries are necessary for processing models built using them. Their licenses are BSD-3-Clause, Apache-2.0, and BSD-3-Clause respectively.
+### Third-Party Components & Licenses
 
-## Implementation Details
-The implementation focuses on creating a flexible, privacy-preserving and efficient architecture deployable within the use case partner’s infrastructure that can adapt various machine learning models for explanation. Special attention is given to the scalability of the system, ensuring that it can handle large datasets and complex models without significant performance degradation. Additionally, the implementation ensures that the system is secure and respects data privacy norms, making it suitable for use in sensitive and regulated environments.
+-   **Pandas/Numpy:** Used for data manipulation, licensed under BSD-3-Clause.
+-   **Scikit-learn:** Integrated for model processing, licensed under BSD-3-Clause.
 
-## Partners & Roles
-- **Prometheus-X Organization**: Provides overall framework and governance for the development and deployment of the ALT-AI Building Block (BB).
-- **AffectLog**: Leads the development of the Trustworthy AI (ALT-AI) tools and ensures integration with Prometheus-X infrastructure.
-- **Data Providers**: Supply datasets for training and testing machine learning models. Ensure data quality and compliance with data protection regulations.
-- **Model Developers**: Create and train machine learning models that will be analyzed by the ALT-AI BB.
-- **End Users**: Include data scientists, business analysts, and regulatory bodies who utilize the ALT-AI BB for interpreting model predictions, ensuring model fairness, and complying with regulations.
+### Implementation Details
 
-## Usage In The Dataspace
-- **Interoperability**: The ALT-AI BB ensures seamless integration and interoperability within the data space.
-- **Data Governance**: Implements robust data governance practices to ensure data security, privacy, and compliance with legal and ethical standards.
-- **Collaboration**: Facilitates collaboration among various stakeholders in the data space, enabling shared insights and fostering innovation.
-- **Scalability**: Designed to handle large volumes of data and complex models, making it suitable for diverse applications within the data space.
-- **Standardization**: Supports common data standards (e.g., JSON, CSV) to ensure compatibility and ease of data exchange within the data space.
+Implementation is focused on creating a secure and efficient architecture deployable within standard infrastructure. ALT-AI is optimized for medium-sized datasets and models, ensuring reliable performance without significant resource strain. Data privacy and security are prioritized to meet compliance requirements.
 
-## Leveraging AffectLog in Organizational Skill Gap Analysis
-AffectLog's Trustworthy AI (ALT-AI) can be integrated into the Organizational Skill Gap Analysis process to enhance the interpretation of skill gap data through advanced AI models. By using ALT-AI, organizations can:
-- **Model Explanation and Feature Importance**: Understand the factors contributing to skill gaps by analyzing predictions from AI models. This helps in identifying key areas for employee development.
-- **Fairness Analysis**: Ensure that the AI models used for skill gap analysis do not introduce biases, promoting fair and inclusive development programs.
-- **Model Comparison**: Compare different analytical models to determine the most effective approach for skill gap analysis.
+### Partners & Roles
 
-## Visualization using Distributed Data Visualization BB (#7)
-For enhanced data interpretation and stakeholder communication, integrate with the Distributed Data Visualization BB (#7) to provide advanced graphical representations of:
-- Skill gap analysis results.
-- Feature importance and model explanations.
-- Comparative analysis of different models.
+-   **Prometheus-X Organization:** Provides governance and framework for ALT-AI development.
+-   **AffectLog:** Leads the development and integration of ALT-AI tools within Prometheus-X.
+-   **Data Providers:** Supply datasets for model training, ensuring data quality and compliance.
+-   **Model Developers:** Develop machine learning models for analysis by ALT-AI.
+-   **End Users:** Include data scientists and business analysts who use ALT-AI to interpret model outputs.
 
-These visualizations will aid in better understanding and addressing skill gaps within the organization.
+### Usage in the Dataspace
 
-## OpenAPI Specification
-In the future, an OpenAPI specification will be provided for the ALT-AI's RESTful API, detailing available endpoints for submitting models for explanation, retrieving results, and managing user sessions and data security.
+-   **Focused Analysis:** ALT-AI provides clear insights into machine learning models, focusing on specific predictions and feature contributions within the supported scope.
+-   **Data Governance:** Prioritizes secure and compliant data handling throughout the analysis process.
+-   **Collaborative Insights:** Helps bridge the gap between technical data scientists and business stakeholders by offering straightforward explanations of model outputs.
+-   **Scalability:** While optimized for small to medium datasets, ALT-AI ensures that analyses are both efficient and informative.
 
-## Test Specification
+#### Example of Dataspace Usage: Skill Gap Analysis
 
-### Test Plan
-The testing strategy will include unit tests, integration tests, and UI tests (where relevant), employing a combination of automated and manual testing methods to ensure comprehensive coverage.
-- **Tools**: PyTest for unit tests, Postman for API integration tests, and Selenium for UI tests (if a web interface is provided).
+In the skills domain, ALT-AI can be applied to assess and understand skill gaps within an organization:
 
-### Unit Tests
-- **Model Adapter Tests**: Verify that various model types are correctly adapted for analysis.
-- **Explanation Generator Tests**: Ensure that explanations, feature importances, and model comparisons are accurately generated for different model types and datasets.
+-   **Model Explanation:** Provides explanations for AI model predictions related to skill gaps, helping HR professionals understand underlying factors, such as insufficient training hours or lack of certifications.
+-   **Feature Contribution:** Highlights key factors influencing skill gap predictions, allowing for targeted employee development.
+-   **Visualization:** Outputs are presented in a straightforward dashboard, using simple visual elements to communicate insights effectively.
 
-### Integration Tests
-- **End-to-End Workflow Tests**: Test the complete workflow from model submission through explanation generation to results retrieval.
-- **API Endpoint Tests**: Verify that all RESTful API endpoints respond correctly to valid and invalid requests, handling errors gracefully.
+**Input Format Example:**
 
-### UI Test (Where Relevant)
-If a web interface is provided for interacting with the ALT-AI, UI tests will validate the usability and correctness of the interface, including form submissions, results display, and error messaging.
+-   **Model Input:** CSV file with employee data, including `EmployeeID`, `Department`, `ExperienceYears`, `TrainingHours`, and `Certifications`.
+-   **Output Example:** A dashboard showing feature importance and explanations for skill gap predictions, utilizing basic visual elements like bar charts or scatter plots.
 
-## Disclaimers
-The integration of AffectLog's ALT-AI into the Organizational Skill Gap Analysis process requires a detailed feasibility study to ensure technical compatibility and resource availability.
-Prior to implementation, discussions with relevant stakeholders are necessary to align objectives, contextual feasibility, and privacy considerations.
+### OpenAPI Specification
+
+An OpenAPI specification for ALT-AI's RESTful API will be provided in the future, detailing endpoints for submitting models, retrieving results, and managing security.
+
+### Test Specification
+
+#### Test Plan
+
+Testing will include unit, integration, and UI tests (where applicable), using both automated and manual methods to ensure comprehensive coverage.
+
+-   **Unit Tests:** Validate correct model adaptation and accuracy of generated explanations.
+-   **Integration Tests:** Ensure smooth operation from model submission to result retrieval.
+-   **UI Test (Where Relevant):** Validate usability and correctness of any web interface provided.
+
+### Disclaimers
+
+The integration of AffectLog's ALT-AI into Organizational Skill Gap Analysis, or similar applications, requires careful feasibility studies to assess technical compatibility and resource availability. Discussions with stakeholders are necessary to align on objectives, privacy considerations, and contextual suitability.
+
+This document outlines ALT-AI's capabilities realistically, ensuring that all deliverables are achievable within the current scope, while maintaining a focus on usability, security, and compliance.
 
 This comprehensive test specification aims to ensure that the ALT-AI operates reliably and efficiently, providing valuable insights into machine learning model behavior while maintaining high standards of usability, security, and compliance.
