@@ -103,7 +103,7 @@ The required standards are Git, docker and dockerCompose.
 
 ### ALT-AI
 
-ALT-AI is designed to work with structured, tabular datasets and pre-trained machine learning models, typically used for classification and regression tasks. It supports data formats such as CSV, JSON, and Pandas DataFrames, and can analyze models built with common Python-based libraries like Scikit-learn, XGBoost, and LightGBM.
+ALT-AI is designed to work with structured, tabular datasets and pre-trained machine learning models, typically used for classification and regression tasks. It supports data formats such as CSV, JSON, and Pandas DataFrames, and can analyze models built with common Python-based libraries.
 
 The tool is not suitable for unstructured data types such as video, images, or audio, and does not support models for computer vision, natural language processing, or time-series analysis. Inputs should be clean, with no missing values, and the models provided should be pre-trained, as ALT-AI focuses on post-training analysis.
 
