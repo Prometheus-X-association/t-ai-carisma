@@ -10,7 +10,7 @@ The 3 tools are
 
 2. LOLA (Open Laboratory of Leaning Analytics): another laboratory prototype developed by LORIA/Université de Lorraine, originally intended for auditing AI algorithms, on data provided by French national education partners offering educational resources involving AI technologies.
 
-3. ALT-AI (AffectLog’s Trustworthy AI):  a commercial product developed by AffectLog to analyze the operation of AI algorithms on test data supplied by its customers.
+3. ALT-AI (AffectLog’s Trustworthy AI):  a commercial product developed by AffectLog for analyzing the performance and behavior of AI algorithms using test data provided by customers. It focuses on interpreting machine learning models, providing insights into feature importance, prediction outcomes, and fairness metrics. ALT-AI is designed to support organizations in understanding how their AI systems operate in real-world conditions, offering transparency and trustworthiness in AI-driven decision-making processes. 
 
 ##  Challenges
  
@@ -49,10 +49,7 @@ This makes it possible to evaluate algorithms as closely as possible to the need
 As a result, LOLA can produce indicators that are highly dependent on the service being deployed.
 
 ###  ALT-AI
-ALT-AI is also a suite of tools for explaining, visualizing and understanding machine learning models. It is specialized for analyzing existing AI solutions.
-In the lifecycle, its use comes only after an AI model has been built. It is therefore suitable for auditing
-of an operational system.
-The analysis it produces mainly concerns the explicability of models, focusing on the importance of data actually used in tests carried out with test data supplied by companies.
+ALT-AI provides tools for explaining and visualizing machine learning models, focusing on models that are already built and operational. It is intended for use in auditing AI systems, helping organizations understand how their models make decisions. ALT-AI produces analysis related to model interpretability, with a focus on feature importance and how different inputs affect predictions. This is achieved using test data supplied by the organization, allowing for a clear understanding of the factors driving model outputs.
 
 
 
@@ -106,9 +103,11 @@ The required standards are Git, docker and dockerCompose.
 
 ### ALT-AI
 
-For ALT-AI, the expected data are, on the one hand, test data and, on the other, a learning model intended for use in an enterprise system.
+ALT-AI is designed to work with structured, tabular datasets and pre-trained machine learning models, typically used for classification and regression tasks. It supports data formats such as CSV, JSON, and Pandas DataFrames, and can analyze models built with common Python-based libraries like Scikit-learn, XGBoost, and LightGBM.
 
-The aim is to inspect a process based on a machine learning model and the test dataset in order to gather metrics on the actual use of the data and its weight in decisions.
+The tool is not suitable for unstructured data types such as video, images, or audio, and does not support models for computer vision, natural language processing, or time-series analysis. Inputs should be clean, with no missing values, and the models provided should be pre-trained, as ALT-AI focuses on post-training analysis.
+
+ALT-AI evaluates the performance of a model by analyzing feature importance, providing interpretability insights, and generating performance metrics using the supplied test data and models.
 
 ## Output
 
@@ -127,7 +126,7 @@ These outputs are intended to be compiled in a report in the form of metrics, pr
 
 ### ALT-AI
 
-ALT-AI provides results in JSON format describing the explanation of a machine learning model, including feature importance scores, prediction explanations and fairness analysis results.
+ALT-AI given the complete feasibility and context along with dataset and model access in a valid input format produces a variety of outputs in JSON format to provide detailed insights into machine learning models. These include feature importance scores, prediction explanations, partial dependence plots, and performance metrics across different segments. Additionally, it can provide fairness analysis results, model comparison reports, and residual diagnostics to assess model accuracy. Visualizations and data summaries can be included to help users interpret the results, offering a comprehensive view of model behavior, including any biases, anomalies, or patterns observed during the analysis.
 
 ## Summary comparison table
 
