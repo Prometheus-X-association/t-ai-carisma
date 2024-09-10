@@ -276,3 +276,8 @@ This component is a part of the building block "Trustworthy AI: Algorithm assess
 <!--_Specify the Dataspace Enabling Service Chain in which the BB will be used. This assumes that during development the block (lead) follows the service chain, contributes to tis detailed design and implements the block to meet the integration requirements of the chain._-->
 
 ![Usage in dataspace](diagrams/dataspace_usage.svg)
+
+Data collection is carried out through a standardized connector (PDC).
+The transfer can be carried out at the request of an authorized data provider who has the permissions for this operation.
+The access security protocol is therefore carried out within the framework of this PDC and is supposed to support the consent and contract procedures upstream.
+The other operations are carried out directly on the platform interactively using a web application.
