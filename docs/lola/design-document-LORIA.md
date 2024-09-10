@@ -92,6 +92,10 @@ Some comments:
 - From this moment, the user can monitor the execution of his algorithm (startup, interruption, error reporting, etc.)
 - At the end, a report consisting of the evaluation metrics is available
 
+  The algorithms are materialized by Docker images that are stored according to the same security principles as the data.
+Their access in the platform is limited to a remote execution request, making it impossible to inspect them in order to protect their potential industrial secrecy.
+Furthermore, thanks to the permission system integrated into the platform, only authorized users are allowed to execute an algorithm via a scenario.
+
 **Designing a scenario**
 
 Here is the use case diagram for the scenario designing activity.
