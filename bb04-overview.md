@@ -2,11 +2,11 @@
 
 The aim of this document is to explain the choice that led to the proposal of a toolbox made up of 3 complementary tools to address the issue of trustworthy AI assessment via the Building Block #4 (BB04) of the EDGE-Skills project.
 
-Indeed, this BB brings together 3 organizations that take complementary approaches with different perpectives.
+Indeed, this BB brings together 3 organizations that take complementary approaches with different perspectives.
 
 The 3 tools are
 
-1. CARISMA (CompliAnce, Risk, and Security ModelAnalyzer): a laboratory prototype developed by the University of Kobletnz-Fraunhofer ISST (UoK)  which is not originally intended exclusively for AI technologies, but which can be applied to them, particularly in the area of data security, with some adaptations.
+1. CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer): a software developed by the University of Koblenz and the Fraunhofer Institute for Software and Systems Engineering ISST, which is not originally intended exclusively for AI technologies. The software is a comprehensive open source suite that enables system designers and security experts to perform automated compliance, risk and security analyses of software and system models. It can be applied to analyze models of AI scenarios and to generate meaningful insights and reports to fulfill compliance obligations.
 
 2. LOLA (Open Laboratory of Leaning Analytics): another laboratory prototype developed by LORIA/Université de Lorraine, originally intended for auditing AI algorithms, on data provided by French national education partners offering educational resources involving AI technologies.
 
@@ -15,15 +15,15 @@ The 3 tools are
 ##  Challenges
  
 ###  General context
+
+The new AI legislation recently adopted by the EU aims to guarantee its citizens AI applications and services they can trust.
  
- The new AI legislation recently adopted by the EU aims to guarantee its citizens AI applications and services they can trust.
- 
- This new law offers companies a legal framework that promotes trustworthy AI.
+This new law offers companies a legal framework that promotes trustworthy AI.
 Depending on the level of risk identified for an AI-enabled application, risk reduction and transparency obligations will be imposed on economic players.
  
- Applications in the field of education are generally considered to be of high or at least limited risk, which leads EdTech companies to require a conformity assessment before a given AI system is commissioned or placed on the market.
+Applications in the field of education are generally considered to be of high or at least limited risk, which leads EdTech companies to require a conformity assessment before a given AI system is commissioned or placed on the market.
  
- The aim of BB04 is to help EdTech companies adopt appropriate and targeted risk management measures to mitigate the risks identified for AI use cases, by proposing automated assessment tools that apply right from the system design stage and throughout its lifecycle.
+The aim of BB04 is to help EdTech companies adopt appropriate and targeted risk management measures to mitigate the risks identified for AI use cases, by proposing automated assessment tools that apply right from the system design stage and throughout its lifecycle.
  
 ### Trust and transparency
  
@@ -31,16 +31,15 @@ The tools we propose in BB04 are defined as automated evaluation tools.
 They are used at different points in an application's lifecycle, and rely on different inputs.
  But their common purpose is to produce trust-related quality indicators in the form of audit reports that can be shared by companies, thus creating the necessary conditions of transparency.
  
-
 ## Use cases in EDGE Skills
 
 In this section, we summarize how the tools can be used, and how they can contribute to improving the quality of an AI-based service.
 
-### CARISMA
+### CARiSMA
 
 CARiSMA is a comprehensive software suite that enables system designers and security experts to perform automated compliance analysis, risk analysis and security analysis of software and system models.
 It is a generic tool that can be used for systems that incorporate AI, and a fortiori in the field of education.
-The tool is used during the design phase of a system, when safety requirements must be formally specified.
+The tool is used during the design phase of a system, when certain privacy and security related requirements must be formally specified.
 In particular, it enables security and privacy constraints to be verified, helping a company to understand (and show, in a transparent approach) how personal data is used in the context of an AI service to be analyzed.
 
 ### LOLA
@@ -51,17 +50,13 @@ As a result, LOLA can produce indicators that are highly dependent on the servic
 ###  ALT-AI
 ALT-AI provides tools for explaining and visualizing machine learning models, focusing on models that are already built and operational. It is intended for use in auditing AI systems, helping organizations understand how their models make decisions. ALT-AI produces analysis related to model interpretability, with a focus on feature importance and how different inputs affect predictions. This is achieved using test data supplied by the organization, allowing for a clear understanding of the factors driving model outputs.
 
-
-
 ## Users
 
-### CARISMA
+### CARiSMA
 
-A CARISMA user is a system designer, or rather a team of system designers.
-During the design phase, designers specify the expected properties of a system in a dedicated language.
-To do this, they use standard formalisms such as UML.
-The formalism can be enriched with non-functional safety properties concerning the AI risks identified by https://owasp.org/www-project-machine-learning-security-top-10/.
-So they are therefore also AI experts.
+A typical CARiSMA user is a system designer or a team of system designers.
+During the design phase, they specify the expected properties of a system in a formal language such as UML.
+The formalism can be enriched with certain properties, e.g. concerning AI risks, such as those identified by https://owasp.org/www-project-machine-learning-security-top-10/. In the context of EDGE-Skills AI providers will be enabled to analyze their solutions, to check for potential compliance issues and to create reports that support certain compliance obligations.
 
 ###  LOLA
 
@@ -79,10 +74,10 @@ A scenario designer is therefore a partner of the platform operator.
 
 ## Input
 
-### CARISMA
+### CARiSMA
 
-Carisma's input data is a formal specification of a system integrating AI-specific security constraints.
-The recommended standard is extended UML.
+Carisma's input data is a formal specification of a system integrating AI-specific properties.
+The recommended standard to create a specification is the Unified Modeling Language (UML) with specific extensions (UML profiles).
 
 ###  LOLA
 
@@ -113,10 +108,10 @@ ALT-AI evaluates the performance of a model by analyzing feature importance, pro
 
 All three tools are designed to audit systems and, consequently, their respective results are intended to be compiled in a report to facilitate their analysis.
 
-### CARISMA
+### CARiSMA
 
-CARISMA establishes a set of compliance analyses based on the AI security properties defined in the system specifications.
-These properties concern users, data, processing and risk assessment.
+CARiSMA establishes a set of compliance analyses based on the AI security properties defined in the system specifications.
+These properties concern users, systems, data, processing and risk properties.
 A connection to the visualization BB is envisaged to finalize a report.
 
 ### LOLA
