@@ -147,6 +147,9 @@ ALT-AI given the complete feasibility and context along with dataset and model a
 
 In this section we present a comparison table that gives a synthetic view of the BB04.
 
+![Comparison table](comparison-tab.png)
+
+
 ##Conclusion
 
 This document only offers an overview of the construction of the BB04 as a toolbox composed of three elements.
