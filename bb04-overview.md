@@ -147,3 +147,13 @@ ALT-AI given the complete feasibility and context along with dataset and model a
 
 In this section we present a comparison table that gives a synthetic view of the BB04.
 
+##Conclusion
+
+This document only offers an overview of the construction of the BB04 as a toolbox composed of three elements.
+We invite the reader to discover each of them in detail in the following respective documents:
+
+- [LORIA's LOLA platform](lola/design-document-LORIA.md)
+- [AffectLog's AffectLog360 platform](affectlog/design-document-AffectLog.markdown)
+- [University of Koblenz's CARiSMA platform](carisma/README.md)
+  
+
