@@ -125,7 +125,7 @@ ALT-AI evaluates the performance of a model by analyzing feature importance, pro
 
 All three tools are designed to audit systems and, consequently, their respective results are intended to be compiled in a report to facilitate their analysis.
 
-It should be noted that these tools produce qualitative and quantitative measures that are intended to help in the analysis of the products to be evaluated.
+It should be noted that these tools produce qualitative and quantitative measures that are intended to help in the analysis of the system to be evaluated.
 Therefore, their integration into a report requires the intervention of an auditor who will have the task of interpreting and possibly graphically presenting the computed metrics.
 
 ### CARiSMA
