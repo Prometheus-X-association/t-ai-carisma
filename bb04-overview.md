@@ -55,6 +55,13 @@ ALT-AI provides tools for explaining and visualizing machine learning models, fo
 
 ## Users
 
+In this section, we focus on the notion of user of the BB04 toolbox.
+At the general level, the need is driven by an EdTech organization that wishes to integrate services that integrate AI technologies.
+They therefore represent the project management.
+But depending on the choice of the tool to be used, the skills of the stakeholders who will use them differ.
+It should be noted that the stakeholders can be partners or service providers of the company behind the initiative.
+This is what we will specify in this section
+
 ### CARiSMA
 
 A typical CARiSMA user is a system designer or a team of system designers.
