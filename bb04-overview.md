@@ -145,4 +145,5 @@ ALT-AI given the complete feasibility and context along with dataset and model a
 
 ## Summary comparison table
 
-here the room for a comparison table
+In this section we present a comparison table that gives a synthetic view of the BB04.
+
