@@ -34,6 +34,9 @@ They are used at different points in an application's lifecycle, and rely on dif
 ## Use cases in EDGE Skills
 
 In this section, we summarize how the tools can be used, and how they can contribute to improving the quality of an AI-based service.
+As mentioned above, the three tools have in common the assessment of risks in the context of the use of AI.
+There are several types of risks and the three tools are limited to risks that can rely on an automated assessment process.
+Each of them is specialized to a particular category of risks that we present in this section.
 
 ### CARiSMA
 
