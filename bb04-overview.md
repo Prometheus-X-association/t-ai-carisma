@@ -82,6 +82,11 @@ We can imagine two types of situation: 1) the company is looking for an algorith
 A scenario is independent of data and algorithms.
 A scenario designer is therefore a partner of the platform operator.
 
+### ALT-AI
+
+For ALT-AI, the skills expected from users regarding AI and Machine Learning. We can summarize them under the term MLOps
+MLOps is a core function of Machine Learning engineering, focused on streamlining the process of taking machine learning models to production, and then maintaining and monitoring them.
+
 ## Input
 
 ### CARiSMA
