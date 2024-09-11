@@ -89,6 +89,8 @@ MLOps is a core function of Machine Learning engineering, focused on streamlinin
 
 ## Input
 
+Due to the nature of the different processing of each tools, the inputs are also very different as we detail in this section.
+
 ### CARiSMA
 
 Carisma's input data is a formal specification of a system integrating AI-specific properties.
