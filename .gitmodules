@@ -1,0 +1,3 @@
+[submodule "carisma-tool"]
+	path = carisma-tool
+	url = https://github.com/CARiSMA-Tool/carisma-tool
