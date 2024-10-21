@@ -1,3 +1,4 @@
 [submodule "carisma-tool"]
 	path = carisma-tool
-	url = https://github.com/CARiSMA-Tool/carisma-tool
+	url = git@github.com:CARiSMA-Tool/carisma-tool.git
+	branch = master
