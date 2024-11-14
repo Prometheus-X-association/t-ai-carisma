@@ -2,7 +2,7 @@
 left to right direction
 
 actor u as "User\n(Data Subject)"
-actor a as "AI Expert\n(AI Provider)"
+actor a as "Use Case Lead\n(AI Expert)"
 
 package "Trustworthy AI: CARiSMA" {
 	usecase UcCreate as "Create AI Scenario Model"

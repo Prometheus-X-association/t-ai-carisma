@@ -1,6 +1,6 @@
 @startuml
 
-actor "AI Expert\n(AI Provider)" as a
+actor "Use Case Lead\n(AI Expert)" as a
 participant "CARiSMA\nModeller" as cm
 participant "CARiSMA\nAnalyzer" as ca
 participant "PDC @BB04\n(Provider)" as pdc1
