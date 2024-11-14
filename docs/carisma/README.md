@@ -4,7 +4,7 @@
 
 The LORIA and Affectlog solutions are complemented by [CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer)](https://github.com/CARiSMA-Tool/carisma-tool), developed by the University of Koblenz and Fraunhofer ISST. CARiSMA is a comprehensive open source software suite that enables system designers and security experts to perform automated compliance analyses, risk analyses and security analyses of software and system models. This allows users to consider security requirements early in the development process. Unified Modelling Language (UML) models are annotated with security-specific requirements that can be tailored to the users’ needs to cover a wide range of topics. Checks are performed on UML models, analyzing the models against the specified requirements and providing the user with detailed feedback on the models' compliance with the previously defined requirements.
 
-In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an AI Expert (employee of AI Provider) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the AI Expert to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
+In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (employee of AI Provider / an AI Expert) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
 
 ![Figure 1: AI Scenario Analysis](images/AI%20Scenario%20Analysis.drawio.svg)
 
@@ -26,35 +26,35 @@ In the context of Trustworthy AI assessment, it is planned to extend the approac
 ### Features/main functionalities
 
 - **Modelling Trustworthy AI systems:** CARiSMA utilizes the profile mechanism of the Unified Modeling Language (UML) which allows to tailor the UML to different, more specific scenarios. 
-  - AI Expert models his system with the Papyrus Modeling Tool
-  - AI Expert applies the profile delivered with CARiSMA to his model
-  - AI Expert applies stereotypes of the profile to  selected elements of his system model
-  - AI Expert fills the tagged values associated with the stereotypes
-  - AI Expert applies constraints to model elements
+  - Use Case Lead (AI Expert) models his system with the Papyrus Modeling Tool
+  - Use Case Lead applies the profile delivered with CARiSMA to his model
+  - Use Case Lead applies stereotypes of the profile to  selected elements of his system model
+  - Use Case Lead fills the tagged values associated with the stereotypes
+  - Use Case Lead applies constraints to model elements
   - Alternatively : The profile mechanism of the CARiSMA tool allows the user to define new stereotypes, tags and constraints for UML elements of his choice
 - **Feedback about trust factors of AI system:** CARiSMA utilizes an Analyzer which implements a series of different analyses for different types of structure and behavioral diagrams/models. 
-  - AI Expert has finished the creation of his system with the new profile
-  - AI Expert creates a new CARiSMA analysis file 
-  - AI Expert chooses the .uml file of his system/model as an input for the analysis 
-  - AI Expert chooses one (or more) of a list of predefined checks/analysis
-  - AI Expert runs the selected checks/analyses
+  - Use Case Lead (AI Expert) has finished the creation of his system with the new profile
+  - Use Case Lead creates a new CARiSMA analysis file 
+  - Use Case Lead chooses the .uml file of his system/model as an input for the analysis 
+  - Use Case Lead chooses one (or more) of a list of predefined checks/analysis
+  - Use Case Lead runs the selected checks/analyses
   - A positive/negative feedback is shown on the screen
   - Alternatively : The plugin architecture of CARiSMA allows the user to implement new new checks/analyses making use of (newly created) stereotypes defined in the profile
 - **Reports of system for documentation purposes:** CARiSMA enables the automatic generation of reports which contain information on the trustworthiness of a system.
-  - AI Expert has finished the creation of his system with the new profile
-  - AI Expert ran a number of checks/analysis
-  - AI Expert clicks on the displayed (positive/negative) analysis result/feedback 
-  - AI Expert chooses to generate a report
-  - AI Expert decides on the XML format and clicks on generate report
-  - A XML report file is created in the project of the AI Experts modeled system
-  - AI Expert opens the XML reports and gets further information of security risks that occurred during the modeling process
-  - AI Expert has the opportunity to refine his system depending on the information received in the report 
-  - Alternatively : AI Expert creates a HTML report instead of a XML report 
+  - Use Case Lead (AI Expert) has finished the creation of his system with the new profile
+  - Use Case Lead ran a number of checks/analysis
+  - Use Case Lead clicks on the displayed (positive/negative) analysis result/feedback 
+  - Use Case Lead chooses to generate a report
+  - Use Case Lead decides on the XML format and clicks on generate report
+  - A XML report file is created in the project of the Use Case Leads modeled system
+  - Use Case Lead opens the XML reports and gets further information of security risks that occurred during the modeling process
+  - Use Case Lead has the opportunity to refine his system depending on the information received in the report 
+  - Alternatively : Use Case Lead creates a HTML report instead of a XML report 
 - **Trustworthiness visualization of AI systems:** CARiSMA will have functions for JSON creation of reports as well as communication of these reports between data space connectors. Visualization components are therefore enabled to visualize these reports on a user's personal dashboard.
-  - AI Expert has finished the creation of his system with the new profile
-  - AI Expert ran a number of checks/analysis
-  - AI Expert clicks on the created report
-  - AI Expert clicks on send
+  - Use Case Lead (AI Expert) has finished the creation of his system with the new profile
+  - Use Case Lead ran a number of checks/analysis
+  - Use Case Lead clicks on the created report
+  - Use Case Lead clicks on send
   - The report gets send to the visualization BB 
   - User can access the visualization before he decides to use the AI system
 
@@ -80,52 +80,52 @@ CARiSMA is beneficial for AI system users:
 
 | Use Case              | Create AI Scenario Model                                                           |
 |-----------------------|------------------------------------------------------------------------------------|
-| Actor(s)              | AI Expert                                                                          |
-| Brief Description     | AI Expert creates a system model in context of Trustworthy AI                      |
+| Actor(s)              | Use Case Lead (AI Expert)                                                                         |
+| Brief Description     | Use Case Lead creates a system model in context of Trustworthy AI                      |
 | Pre-Conditions        | Eclipse, Papyrus and CARiSMA installed                                             |
 | Post-Conditions       | A model of a system with stereotypes, tags and constraints                         |
-| Main Success Scenario | AI Expert designed a system, annotates the required stereotypes, tags, constraints |
+| Main Success Scenario | Use Case Lead designed a system, annotates the required stereotypes, tags, constraints |
 
 | Use Case              | Analyze AI Scenario Model                                                                                 |
 |-----------------------|-----------------------------------------------------------------------------------------------------------|
-| Actor(s)              | AI Expert                                                                                                 |
-| Brief Description     | AI Expert analyzes a system model in context of Trustworthy AI                                            |
+| Actor(s)              | Use Case Lead (AI Expert)                                                                                 |
+| Brief Description     | Use Case Lead analyzes a system model in context of Trustworthy AI                                        |
 | Pre-Conditions        | A system model in context of Trustworthy AI has been created                                              |
-| Post-Conditions       | A feedback is given to the AI Expert whether his system is correct or not                                 |
-| Main Success Scenario | AI Expert creates a CARiSMA analysis file, chooses the analysis type he wants to execute and clicks "Run" |
+| Post-Conditions       | A feedback is given to the Use Case Lead whether his system is correct or not                             |
+| Main Success Scenario | Use Case Lead creates a CARiSMA analysis file, chooses the analysis type he wants to execute and clicks "Run"|
 
 | Use Case              | Create & View AI Analysis Report                                                                                                                                                       |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Actor(s)              | AI Expert                                                                                                                                                                              |
-| Brief Description     | AI Expert creates an analysis report of a model in context of Trustworthy AI                                                                                                           |
+| Actor(s)              | Use Case Lead (AI Expert)                          |
+| Brief Description     | Use Case Lead creates an analysis report of a model in context of Trustworthy AI                                                                                                           |
 | Pre-Conditions        | A system has been modeled and an analysis file is created and executed                                                                                                                 |
 | Post-Conditions       | An HTML or XML file which contains information on the success or failure of the analysis including a brief description of possible mistakes                                            |
-| Main Success Scenario | AI Expert clicks on the result of the analysis and chooses the format he want to create the report in, a file gets created in the folder of the model, the AI Experts opens the report |
+| Main Success Scenario | Use Case Lead clicks on the result of the analysis and chooses the format he want to create the report in, a file gets created in the folder of the model, the Use Case Leads opens the report |
 
 | Use Case              | Improve AI Scenario Model                                                                                                                                                                                                                                                                      |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Actor(s)              | AI Expert                                                                                                                                                                                                                                                                                      |
-| Brief Description     | AI Expert uses the error pointed out in the AI Analysis Report to improve them in the modeled system                                                                                                                                                                                           |
+| Actor(s)              | Use Case Lead (AI Expert)                                                                                                                                                                                                                                                                                      |
+| Brief Description     | Use Case Lead uses the error pointed out in the AI Analysis Report to improve them in the modeled system                                                                                                                                                                                           |
 | Pre-Conditions        | A system has been modeled and an analysis report file is created which contains errors for the Checks/Analysis executed                                                                                                                                                                        |
 | Post-Conditions       | An improved system model which contains no more errors after the same Analysis is executed again                                                                                                                                                                                               |
-| Main Success Scenario | AI Expert opens the report which shows him one (or several more) errors, he improves his system regarding the errors and saves the system model, he opens the analysis file again and runs the analysis again, he creates another report which shows him a success for all the checks executed |
+| Main Success Scenario | Use Case Lead opens the report which shows him one (or several more) errors, he improves his system regarding the errors and saves the system model, he opens the analysis file again and runs the analysis again, he creates another report which shows him a success for all the checks executed |
 
 | Use Case              | Share AI Analysis Report                                                                                                                                                    |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Actor(s)              | AI Expert                                                                                                                                                                   |
-| Brief Description     | AI Expert clicks on the analysis of the system and chooses send, he specifies the address and clicks send                                                                   |
+| Actor(s)              | Use Case Lead (AI Expert)                                                                                                                                                                    |
+| Brief Description     | Use Case Lead clicks on the analysis of the system and chooses send, he specifies the address and clicks send                                                                   |
 | Pre-Conditions        | A system has been modeled and an analysis file is created and executed                                                                                                      |
 | Post-Conditions       | A JSON file is created and send to a Connector specialized by the Visualization BB                                                                                          |
-| Main Success Scenario | AI Expert clicks on the result of the analysis and chooses "send", (specifies the location of the Visualization BB) and the analysis JSON gets send to the Visualization BB |
+| Main Success Scenario | Use Case Lead clicks on the result of the analysis and chooses "send", (specifies the location of the Visualization BB) and the analysis JSON gets send to the Visualization BB |
 
 ### Requirements
 
-- R1. CARiSMA MUST allow an AI Expert to create an AI scenario model
-- R2. CARiSMA MUST allow an AI Expert to analyse the AI scenario model
-- R3. CARiSMA MUST allow an AI Expert to create an AI Analysis report
-- R4. CARiSMA MUST allow an AI Expert to view the AI Analysis Report
-- R5. CARiSMA MUST allow an AI Expert to improve the AI Analysis Report
-- R6. CARiSMA SHOULD allow an AI Expert to share an AI Analysis Report with the building block "Distributed Data Visualization"
+- R1. CARiSMA MUST allow an Use Case Lead (AI Expert) to create an AI scenario model
+- R2. CARiSMA MUST allow an Use Case Lead (AI Expert) to analyse the AI scenario model
+- R3. CARiSMA MUST allow an Use Case Lead (AI Expert) to create an AI Analysis report
+- R4. CARiSMA MUST allow an Use Case Lead (AI Expert) to view the AI Analysis Report
+- R5. CARiSMA MUST allow an Use Case Lead (AI Expert) to improve the AI Analysis Report
+- R6. CARiSMA SHOULD allow an Use Case Lead (AI Expert) to share an AI Analysis Report with the building block "Distributed Data Visualization"
 - R7. The building block "Distributed Data Visualization SHOULD allow a user (the data subject) to view the AI Analysis Report
 
 ## Integrations
@@ -167,11 +167,11 @@ For each of these .uml files, a CARiSMA analysis file can be created which allow
 
 ### Output
 
-Once an analysis is complete, the AI Expert is informed of its outcome, indicating whether it is positive or negative. Additionally, the AI Expert has the option to generate a report in different machine-readable formats, providing further details on potential issues and sources of risks in system modeling. This enables the AI Expert to make necessary adjustments and refinements to the system, thereby closing security and risk gaps and establishing trust within the system.
+Once an analysis is complete, the Use Case Lead (AI Expert) is informed of its outcome, indicating whether it is positive or negative. Additionally, the Use Case Lead has the option to generate a report in different machine-readable formats, providing further details on potential issues and sources of risks in system modeling. This enables the Use Case Lead to make necessary adjustments and refinements to the system, thereby closing security and risk gaps and establishing trust within the system.
 
 ![Figure 5: Report in XML Format](images/ReportXML.png)
 
-Once the model of the system design is finalized, the AI Expert can trigger the sharing of the AI Analysis Report with other components. It's planned to share the AI Analysis Report with the building block "Decentralized Data Visualization". The user (data subject) is then able to view the report to get insights of how their data is processed within an AI scenario. The format of the shared AI Analysis Report looks as follows (subject to change):
+Once the model of the system design is finalized, the Use Case Lead (AI Expert) can trigger the sharing of the AI Analysis Report with other components. It's planned to share the AI Analysis Report with the building block "Decentralized Data Visualization". The user (data subject) is then able to view the report to get insights of how their data is processed within an AI scenario. The format of the shared AI Analysis Report looks as follows (subject to change):
 
 ```plantuml
 @startjson
@@ -220,7 +220,7 @@ The `AnalysisHost` interface provides access to this blackboard, as well as meth
 
 The sequence diagram shows how the component communicates with other components.
 
-![Figure 9: AI Expert & User Interactions](images/sequence.svg)
+![Figure 9: Use Case Lead (AI Expert) & User Interactions](images/sequence.svg)
 
 ## Configuration and deployment settings
 
