@@ -6,7 +6,7 @@ The LORIA and Affectlog solutions are complemented by [CARiSMA (CompliAnce, Risk
 
 In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (employee of AI Provider / an AI Expert) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
 
-![Figure 1: AI Scenario Analysis](images/AI%20Scenario%20Analysis.drawio.svg)
+![Figure 1: AI Scenario Analysis](images/AI%20Scenario%20Analysis2.drawio.svg)
 
 ## Technical usage scenarios & Features
 
