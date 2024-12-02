@@ -135,8 +135,15 @@ To achieve this task, we require the use of commons standards:
 - for the metadata format, the format adopted is [JSON-LD](https://json-ld.org/)
 - for the metadata sharing, we recommend
 [xAPI profile server ](https://profiles.adlnet.gov/profiles)
-- for the data transfer, we used the sFTP protocol
+- for the data transfer, we support the sFTP protocol. But in the current setup of the dataspace, we will use the [Dataspace Connector](https://github.com/Prometheus-X-association/dataspace-connector)
 
+Regarding the data transfer, we detailed the data transmission over the dataspace connector via the following:
+
+![Dataspace-connector-usage](img/pdc-usage.png)
+
+For now, we will transfer the data using xAPI queries stored inside compressed files over the dataspace connector. We strongly advice to encrypt and sign the archive transfered over the dataspace connector using asymetric encryption as it provides a recommended level of security for confidentiality and integrity of the data.
+
+We may see int the future improvements to the dataspace connector that will allow us to directly transfer xAPI data using only xAPI queries with end-to-end LRS from both sides in the dataspace connector, removing the need of creating and encrypting a file containing all the data. 
 
 ## Relevant Standards
 
