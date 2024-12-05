@@ -56,7 +56,6 @@ In the context of Trustworthy AI assessment, it is planned to extend the approac
   - Use Case Lead clicks on the created report
   - Use Case Lead clicks on send
   - The report gets send to the visualization BB 
-  - User can access the visualization before he decides to use the AI system
 
 ### Technical usage scenarios
 
@@ -67,10 +66,6 @@ CARiSMA is beneficial for AI system engineers:
 - **Fast Feedback:** Offers immediate feedback on AI systems and therefore helps to identify issues early in the development process.
 - **Documentation:** Automates the documentation process with comprehensive reports ad therefore saves time and ensuring consistent documentation, e.g. as required by the EU AI Act.
 - **Customization:** Allows for tailored modeling and analysis to fit specific scenarios and requirements through customizable profiles and analysis checks.
-
-CARiSMA is beneficial for AI system users:
-
-- **Visualization:** Enhances the visualization BB to interpret trustworthiness reports and therefore helps the user in decision making on system usage.
 
 ## Requirements
 
@@ -125,8 +120,7 @@ CARiSMA is beneficial for AI system users:
 - R3. CARiSMA MUST allow an Use Case Lead (AI Expert) to create an AI Analysis report
 - R4. CARiSMA MUST allow an Use Case Lead (AI Expert) to view the AI Analysis Report
 - R5. CARiSMA MUST allow an Use Case Lead (AI Expert) to improve the AI Analysis Report
-- R6. CARiSMA SHOULD allow an Use Case Lead (AI Expert) to share an AI Analysis Report with the building block "Distributed Data Visualization"
-- R7. The building block "Distributed Data Visualization SHOULD allow a user (the data subject) to view the AI Analysis Report
+- R6. CARiSMA SHOULD allow an Use Case Lead (AI Expert) to share an AI Analysis Report in a predefined format that can be visualized in the building block "Distributed Data Visualization"
 
 ## Integrations
 
