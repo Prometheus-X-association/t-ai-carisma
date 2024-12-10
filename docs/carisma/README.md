@@ -4,9 +4,7 @@
 
 The LORIA and Affectlog solutions are complemented by [CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer)](https://github.com/CARiSMA-Tool/carisma-tool), developed by the University of Koblenz and Fraunhofer ISST. CARiSMA is a comprehensive open source software suite that enables system designers and security experts to perform automated compliance analyses, risk analyses and security analyses of software and system models. This allows users to consider security requirements early in the development process. Unified Modelling Language (UML) models are annotated with security-specific requirements that can be tailored to the users’ needs to cover a wide range of topics. Checks are performed on UML models, analyzing the models against the specified requirements and providing the user with detailed feedback on the models' compliance with the previously defined requirements.
 
-In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (AI Expert) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information as shown in Figure 1. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
-
-![Figure 1: AI Scenario Analysis](images/AI%20Scenario%20Analysis2.drawio.svg)
+In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (AI Expert) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
 
 ## Technical usage scenarios & Features
 
@@ -71,7 +69,7 @@ CARiSMA is beneficial for AI system engineers:
 
 ### Use Cases
 
-![Figure 2: Use Cases of the CARiSMA in BB context](images/use-cases.svg)
+![Figure 1: Use Cases of the CARiSMA in BB context](images/use-cases.svg)
 
 | Use Case              | Create AI Scenario Model                                                           |
 |-----------------------|------------------------------------------------------------------------------------|
@@ -153,17 +151,17 @@ CARiSMA in the context of this building block does not implement an element of a
 
 No data from other building blocks will be received. Papyrus allows the creation of Unified Modeling Language (UML) models in the .di format via a graphical user interface. When such a model is created, a corresponding .uml file is created at the same time, which represents and saves this model in a tree structure used as an input for the CARiSMA tool. An extension will allow the user to model his system in the context of “Trustworthy AI”, for example by creating an AI scenario model on the use of data with personal information, by annotating various model elements with new stereotypes, tagged values and constraints.
 
-![Figure 3: Example Model for Data Usage Control](images/datausagecontrol.svg)
+![Figure 2: Example Model for Data Usage Control](images/datausagecontrol.svg)
 
 For each of these .uml files, a CARiSMA analysis file can be created which allows to select various checks/analyses via an UI tailored to the problem the user wants to analyze his system design. In the context of our previous example for a “Trustworthy AI” scenario, the user will be able to select an analysis that checks whether personal data has been made unrecognizable or not.
 
-![Figure 4: Analysis Editor User Interface](images/AnalysisUI.png)
+![Figure 3: Analysis Editor User Interface](images/AnalysisUI.png)
 
 ### Output
 
 Once an analysis is complete, the Use Case Lead (AI Expert) is informed of its outcome, indicating whether it is positive or negative. Additionally, the Use Case Lead has the option to generate a report in different machine-readable formats, providing further details on potential issues and sources of risks in system modeling. This enables the Use Case Lead to make necessary adjustments and refinements to the system, thereby closing security and risk gaps and establishing trust within the system.
 
-![Figure 5: Report in XML Format](images/ReportXML.png)
+![Figure 4: Report in XML Format](images/ReportXML.png)
 
 Once the model of the system design is finalized, the Use Case Lead (AI Expert) can trigger the sharing of the AI Analysis Report with other components. It's planned to share the AI Analysis Report with the building block "Decentralized Data Visualization". The user (data subject) is then able to view the report to get insights of how their data is processed within an AI scenario. The format of the shared AI Analysis Report looks as follows (subject to change):
 
@@ -194,9 +192,15 @@ Once the model of the system design is finalized, the Use Case Lead (AI Expert) 
 @endjson
 ```
 
-![Figure 6: Example Structure of an AI Analysis Report](images/datasample.svg)
+![Figure 5: Example Structure of an AI Analysis Report](images/datasample.svg)
 
 ## Architecture
+
+The integration of CARiSMA into the data space is illustrated in Figure 6. The created data are an *AI scenario model* and an *AI Analysis report*. The analysis report can be shared with other building blocks via a data space connector (PDC). This allows a data subject to retrieve and read the report in order to be informed about potential risks in the AI scenario the user considers to use.
+
+![Figure 6: Integration of CARiSMA in the data space](images/CARiSMA-nginx-PDC.png)
+
+### CARiSMA's Internal Structure
 
 The main class Carisma is registered as an Eclipse plugin and provides access to the various structures, serving as the controller for the different components of the tool.
 
