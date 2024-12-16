@@ -307,29 +307,45 @@ The testing strategy will include JUnit based tests of the implementation of CAR
 
 ### Unit tests
 
-Unit tests for three newly developed components will be implemented:
+Unit tests will be implemented for three newly developed components. Each test case will verify specific functionalities:
 
 ##### Component Profile
 
 An extension of the Unified Modeling Language (UML) which allows for Trustworthy AI specific annotations to a model.
 
-JUnit test should check that all necessary elements can be annotated with the required stereotypes so that the system can be modeled correctly.
+Test cases :
+* Verify that all neccessary element, like actions, associations and classes can be annotated with the required stereotypes.
+* Ensure that unsupported elements cannot be annotated with any stereotypes defined for Trustworthy AI specific annotations
+* Confirm that double annotated elements with the same stereotype are not possible
+* Verify that conflicting stereotype annotations are handled properly
 
 ##### Component Check/Analysis
 
 A component which analyses a given model and gives a feedback whether the model is correct
 
-JUnit test should check that correct and incorrect are identified as such by corresponding analysis
+Test cases :
+* Verify that an analysis file can be created
+* Confirm that all Trustworthy AI specific Checks can be choosen in the CARiSMA analysis file
+* Test that errors in an incorrect model are identified in the analysis file 
+* Confirm that a previously incorrect model can be modified after an analysis was conducted
+* Ensure that an altered model can be analyzed again with the newly altered content
+* Verify that a correct model passes an analysis
 
 ##### Component HTML/XML/JSON-LD Report
 
 A component which enables the creation for HTML/XML/JSON-LD reports for a given analysis of a model/system
 
-JUnit test should check that an HTML, XML, JSON-LD report can be created which contains the correct content depending on the input scenario and analysis
+Test cases :
+* Verify the successful creation of a HTML reort containing the accurate content for either a valid or invalid analysis
+* Verify the successful creation of a XML reort containing the accurate content for either a valid or invalid analysis
+* Confirm JSON-LD reports include all required metadata and adhere to the expected structure
 
 ### Integration tests
 
-**Connectors:** Verification of all API endpoints (for CARiSMA and Visualization BB) and if they respond correctly to valid and invalid requests. Also check for correct error handling.
+* Verify that all API endpoints respond correctly to valid requests 
+* Test behavior for invalid requests, for example with unauthorized access
+* Confirm that endpoints maintain expected performance under high load conditions
+* Validate the correct communication between neccessary endpoints
 
 ### UI test (where relevant)
 
