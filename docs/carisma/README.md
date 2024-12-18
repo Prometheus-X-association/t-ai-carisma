@@ -336,8 +336,8 @@ Test cases :
 A component which enables the creation for HTML/XML/JSON-LD reports for a given analysis of a model/system
 
 Test cases :
-* Verify the successful creation of a HTML reort containing the accurate content for either a valid or invalid analysis
-* Verify the successful creation of a XML reort containing the accurate content for either a valid or invalid analysis
+* Verify the successful creation of a HTML report containing the accurate content for either a valid or invalid analysis
+* Verify the successful creation of a XML report containing the accurate content for either a valid or invalid analysis
 * Confirm JSON-LD reports include all required metadata and adhere to the expected structure
 
 ### Integration tests
