@@ -6,14 +6,20 @@ _Short description of the BB._
 See the design document [here](docs/).
 
 ## Building instructions
-_Describe how to build the BB._
 
-E.g.: `docker build -t <bb name>:latest .` or `npm install` 
+```bash
+git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
+git submodule init
+git submodule update
+docker build -t carisma carisma-tool/docker/local/
+```
 
-## Running instructions
-_Describe how to run the BB._
+## Running instructions (TBD)
 
-E.g.: `docker compose up` or `npm run`
+```bash
+docker compose up .....
+```
+
 
 ## Example usage
 _Describe how to check some basic functionality of the BB._
