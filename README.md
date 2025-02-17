@@ -11,7 +11,7 @@ See the design document [here](docs/).
 git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
 git submodule init
 git submodule update
-docker build -t carisma carisma-tool/docker/local/
+docker build -t carisma carisma-tool/docker/remote/
 ```
 
 ## Running instructions (TBD)
