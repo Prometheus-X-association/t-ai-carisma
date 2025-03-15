@@ -2,3 +2,6 @@
 	path = carisma-tool
 	url = git@github.com:CARiSMA-Tool/carisma-tool.git
 	branch = master
+[submodule "dataspace-connector"]
+	path = dataspace-connector
+	url = https://github.com/Prometheus-X-association/dataspace-connector.git
