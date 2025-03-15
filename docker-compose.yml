@@ -1,0 +1,38 @@
+services:
+
+  carisma:
+#    container_name: "carisma"
+    build: ./carisma-tool/docker/remote
+    ports:
+      - "2222:22"
+    volumes:
+      - "./authorized_keys:/root/.ssh/authorized_keys"
+
+  dataspace-connector:
+#    container_name: "dataspace-connector"
+    build:
+      context: ./dataspace-connector
+      dockerfile: docker/app/Dockerfile
+      args:
+        ENV: ${NODE_ENV}
+    tty: true
+    volumes:
+      - './src/:/usr/src/app/src'
+    ports:
+      - 3002:${PORT}
+    env_file:
+      - .env
+    environment:
+      MONGO_URI: ${MONGO_URI}
+
+  mongodb:
+#    container_name: "mongodb"
+    build:
+      context: ./dataspace-connector
+      dockerfile: docker/mongodb/Dockerfile
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./data/mongodb:/data/db
+
+    
