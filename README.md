@@ -48,9 +48,9 @@ Since the GUI is sent over network, performance depends on the connection qualit
 
 ## Example usage
 
-The nginx web server currently provides static XML reports only. CARiSMA stores check reports in a machine readable format into a shared folder, which is provided by nginx.
+CARiSMA stores check reports in a machine readable format into a folder, which is provided by nginx.
 
-Send the following requests to the designated endpoints (without traefik, it's on [http://localhost:8080/]):
+Send the following requests to the designated endpoints (without traefik, it's on [http://localhost:8080/]) to retrieve sample reports:
 
 | Endpoint                                          | Example input | Expected output  |
 |---------------------------------------------------|---------------|------------------|
