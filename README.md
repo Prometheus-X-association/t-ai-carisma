@@ -29,7 +29,7 @@ docker compose build
 
 ## Running instructions
 
-Copy (and maybe adjust) the example env file for the dataspace connector and build the containers:
+Copy `.env.sample` file to `.env` and adjust the values. Build the containers:
 
 ```bash
 cp ./dataspace-connector/.env.sample ./.env
@@ -46,18 +46,17 @@ ssh -X -p 2222 root@<docker-host> /opt/carisma/carisma-launcher
 
 Since the GUI is sent over network, performance depends on the connection quality between docker host and local host.
 
-TODO: dataspace connector crashes.
+## Example usage
 
-## Example usage (TBD)
-_Describe how to check some basic functionality of the BB._
-E.g.:
+The nginx web server currently provides static XML reports only. CARiSMA stores check reports in a machine readable format into a shared folder, which is provided by nginx.
 
-Send the following requests to the designated endpoints:
-| Endpoint      | Example input | Expected output   |
-| ------------- | ------------- | ----------------- |
-| /hello        | World         | 200, Hello World! |
-|               |               |                   |
-|               |               |                   |
+Send the following requests to the designated endpoints (without traefik, it's on (http://localhost:8080/) ):
+
+| Endpoint                                          | Example input | Expected output  |
+|---------------------------------------------------|---------------|------------------|
+| /reports/a63868ef-634d-4f66-8f34-068e9fd17a0e.xml | <none>        | dummy XML report |
+| /reports/c7f2581f-fc9a-4441-9cd0-ed97b46a5dc3.xml | <none>        | dummy XML report |
+
 
 ## Unit testing
 ### Setup test environment

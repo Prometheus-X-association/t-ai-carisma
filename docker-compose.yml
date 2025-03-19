@@ -1,38 +1,45 @@
 services:
-
+  
   carisma:
-#    container_name: "carisma"
     build: ./carisma-tool/docker/remote
     ports:
       - "2222:22"
     volumes:
-      - "./authorized_keys:/root/.ssh/authorized_keys"
-
-  dataspace-connector:
-#    container_name: "dataspace-connector"
+      - ./volumes/authorized_keys:/root/.ssh/authorized_keys:ro
+      - ./volumes/carisma-reports:/root/carisma-reports
+      
+  pdc:
     build:
       context: ./dataspace-connector
       dockerfile: docker/app/Dockerfile
       args:
-        ENV: ${NODE_ENV}
+        ENV: production
     tty: true
     volumes:
-      - './src/:/usr/src/app/src'
+      - './dataspace-connector/src/:/usr/src/app/src'
     ports:
-      - 3002:${PORT}
+      - 3000:${PDC_PORT}
     env_file:
       - .env
     environment:
       MONGO_URI: ${MONGO_URI}
 
   mongodb:
-#    container_name: "mongodb"
     build:
       context: ./dataspace-connector
       dockerfile: docker/mongodb/Dockerfile
     ports:
       - "27018:27017"
     volumes:
-      - ./data/mongodb:/data/db
+      - ./volumes/mongodb:/data/db
 
-    
+  # TODO Needs to be isolated from outside world. Connection from outside only via PDC
+  nginx:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./volumes/carisma-reports/:/usr/share/nginx/html:ro
+    environment:
+      - NGINX_HOST=carisma.ptx.uni-koblenz.de
+      - NGINX_PORT=80
