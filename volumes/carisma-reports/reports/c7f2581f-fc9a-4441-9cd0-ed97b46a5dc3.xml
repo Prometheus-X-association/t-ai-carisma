@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AnalysisResult>
+    <AnalyzedModel>test_analysis (UML2)</AnalyzedModel>
+    <Filepath>/test/test.uml</Filepath>
+    <Status>FAIL</Status>
+    <Timestamp>20250319-123158</Timestamp>
+    <CheckResult>
+        <name>UMLsec secure links Check</name>
+        <successful>false</successful>
+        <results>
+            <status>ERROR</status>
+            <text>default attacker can read at CommunicationPath 'null'.</text>
+        </results>
+        <results>
+            <status>ERROR</status>
+            <text>default attacker can insert at CommunicationPath 'null'.</text>
+        </results>
+    </CheckResult>
+    <ReportDump>------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+Running check : UMLsec secure links Check
+------------------------------------------------------------------------------------
+
+Processing all relevant communication paths for dependency 'null' between 'test::Artifact4' and 'test::Artifact5':
+
+	 - Processing communication path 'null' between 'test::Node2', '' and 'test::Node3'
+
+------------------------------------------------------------------------------------
+The analysis detected 2 errors.
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+
+ERROR: default attacker can read at CommunicationPath 'null'.
+
+default attacker can read at CommunicationPath 'null'.
+
+ERROR: default attacker can insert at CommunicationPath 'null'.
+
+default attacker can insert at CommunicationPath 'null'.
+</ReportDump>
+</AnalysisResult>
