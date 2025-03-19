@@ -29,12 +29,12 @@ docker compose build
 
 ## Running instructions
 
-Copy `.env.sample` file to `.env` and adjust the values. Build the containers:
+Copy `.env.sample` file to `.env` and adjust the values. Create an authorized_keys file that contains public SSH keys of users that should be allowed to connect to CARiSMA. Copy PDC sample configuration to production configuration. Start the containers:
 
 ```bash
-cp ./dataspace-connector/.env.sample ./.env
-mkdir .data/
-cp <your-authorized_keys> ./data/authorized_keys
+cp .env.sample ./.env
+cp ./dataspace-connector/src/config.sample.json /dataspace-connector/src/config.production.json 
+cp <your-authorized_keys> ./volumes/authorized_keys
 docker compose up
 ```
 
