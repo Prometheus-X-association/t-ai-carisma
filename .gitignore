@@ -1,4 +1,1 @@
-.env
 /volumes/authorized_keys
-/volumes/mongodb/
-/volumes/traefik_data/

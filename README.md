@@ -7,7 +7,7 @@ See the design document [here](docs/).
 
 ## Building instructions
 
-Checkout this repository and its submodules with:
+Checkout this repository and its submodule(s) with:
 
 ```bash
 git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
@@ -15,13 +15,7 @@ git submodule init
 git submodule update
 ```
 
-Due to https://github.com/Prometheus-X-association/dataspace-connector/issues/38 the following is necessary to successfully build the dataspace connector:
-
-```bash
-echo "\n.git" >> dataspace-connector/.dockerignore
-```
-
-Then build the three containers (carisma + dataspace-connector + mongodb) with:
+Then build the two containers (carisma + dataspace-connector + mongodb) with:
 
 ```bash
 docker compose build
@@ -32,8 +26,6 @@ docker compose build
 Copy `.env.sample` file to `.env` and adjust the values. Create an authorized_keys file that contains public SSH keys of users that should be allowed to connect to CARiSMA. Copy PDC sample configuration to production configuration. Start the containers:
 
 ```bash
-cp .env.sample ./.env
-cp ./dataspace-connector/src/config.sample.json /dataspace-connector/src/config.production.json 
 cp <your-authorized_keys> ./volumes/authorized_keys
 docker compose up
 ```
@@ -50,7 +42,7 @@ Since the GUI is sent over network, performance depends on the connection qualit
 
 CARiSMA stores check reports in a machine readable format into a folder, which is provided by nginx.
 
-Send the following requests to the designated endpoints (without traefik, it's on http://localhost:8080/ ) to retrieve sample reports:
+Send the following requests to the designated endpoints (without further setup, it's on http://localhost:8080/ ) to retrieve sample reports:
 
 | Endpoint                                          | Example input | Expected output  |
 |---------------------------------------------------|---------------|------------------|
