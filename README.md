@@ -51,9 +51,26 @@ Send the following requests to the designated endpoints (without further setup, 
 
 
 ## Unit testing
+The unit tests verify the internal correctness of the CARiSMA Tool and implemented checks as far as tests exist. The tests are implemented as jUnit class tests that make use of a headless Eclipse environment, where necessary. Apache Maven is used to execute all unit tests in batch.
+
+
 ### Setup test environment
+```bash
+git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
+git submodule init
+git submodule update
+```
+
 ### Run tests
-### Expected results
+```bash
+cd carisma-tool
+./mvnw clean verify # on Windows use 'mvnw.exe clean verify'
+```
+
+### Expected result
+After a while, the output should state "BUILD SUCCESS" in green:
+
+![Figure: Output of Successful o jUnit tests](docs/images/mvn-clean-verify-results.png)
 
 ## Component-level testing
 ### Setup test environment
