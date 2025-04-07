@@ -85,7 +85,7 @@ Component level testing the desktop application CARiSMA in the context of Promet
 - Is it possible to retrieve an (example) report of a CARiSMA check?
 
 ### Setup test environment
-Git and Docker (with Docker compose plugin) need to be installed.
+Git and Docker (with Docker compose plugin) need to be installed on the docker host. SSH and curl need to be installed on the local host.
 
 #### On the docker host
 
