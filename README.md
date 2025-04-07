@@ -11,6 +11,7 @@ Checkout this repository and its submodule(s) with:
 
 ```bash
 git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
+cd t-ai-carisma
 git submodule init
 git submodule update
 ```
@@ -57,6 +58,7 @@ The unit tests verify the internal correctness of the CARiSMA Tool and implement
 ### Setup test environment
 ```bash
 git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
+cd t-ai-carisma
 git submodule init
 git submodule update
 ```
@@ -72,7 +74,55 @@ After a while, the output should state "BUILD SUCCESS" in green:
 
 ![Figure: Output of Successful o jUnit tests](docs/images/mvn-clean-verify-results.png)
 
+You can analyze test results and coverage by opening the following file in your browser: `report-aggregate-module/target/site/jacoco-aggregate/index.html`.
+
 ## Component-level testing
+Component level testing the desktop application CARiSMA in the context of Prometheus-X is testing the following things:
+
+- Does CARiSMA run in a docker container?
+- Does an nginx web server run in a docker container?
+- Is it possible to connect to CARiSMA via SSH connection?
+- Is it possible to retrieve an (example) report of a CARiSMA check?
+
 ### Setup test environment
-### Run tests
-### Expected results
+Git and Docker (with Docker compose plugin) need to be installed.
+
+#### On the docker host
+
+```bash
+git clone git@github.com:Prometheus-X-association/t-ai-carisma.git
+cd t-ai-carisma
+git submodule init
+git submodule update
+docker compose build
+docker compose up
+```
+
+#### On the local host (desktop)
+
+If you don't already have one, create an SSH key pair. On MacOS and Linux you probably do it with the command `ssh-keygen`. Copy your public key (probably `~/.ssh/id_rsa.pub` or `~/.ssh/id_ed25519.pub`) to the docker host into the file `t-ai-carisma/volumes/authorized_keys`. You can put several public keys into that file.
+
+### Testing CARiSMA
+#### Run tests
+
+By default, the SSH daemon listens on port 2222 of the docker host. Connect to CARiSMA with:
+
+```bash
+ssh -X -p 2222 root@<docker-host>
+```
+
+#### Expected results
+CARiSMA's GUI should appear on your display. The performance depends on the connection between the docker host and local host. You can create UML models, analyze them with CARiSMA checks and save the report into the 'carisma-reports' directory (imported as CARiSMA project 'carisma-reports').
+ 
+### Testing nginx
+#### Run tests
+You can check with curl, whether the example reports are available. By default the nginx server listens on port 8080 of the docker host:
+```bash
+curl http://<docker-host>:8080/reports/a63868ef-634d-4f66-8f34-068e9fd17a0e.xml
+```
+
+If you stored your own CARiSMA report into the 'carisma-reports' project of your workspace, that report should also be available.
+
+#### Expected results
+You should see an XML snippet in your terminal. The last line should be `</AnalysisResult>`
+
