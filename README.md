@@ -72,7 +72,7 @@ cd carisma-tool
 ### Expected result
 After a while, the output should state "BUILD SUCCESS" in green:
 
-![Figure: Output of Successful o jUnit tests](docs/images/mvn-clean-verify-results.png)
+![Figure: Output of successful jUnit tests](docs/images/mvn-clean-verify-results.png)
 
 You can analyze test results and coverage by opening the following file in your browser: `report-aggregate-module/target/site/jacoco-aggregate/index.html`.
 
@@ -95,8 +95,15 @@ cd t-ai-carisma
 git submodule init
 git submodule update
 docker compose build
-docker compose up
+docker compose up -d
 ```
+
+Verify that both containers are running by issuing 
+```bash
+docker ps
+```
+
+![Figure: Output of docker ps](docs/images/docker-ps-output.png)
 
 #### On the local host (desktop)
 
@@ -105,24 +112,23 @@ If you don't already have one, create an SSH key pair. On MacOS and Linux you pr
 ### Testing CARiSMA
 #### Run tests
 
-By default, the SSH daemon listens on port 2222 of the docker host. Connect to CARiSMA with:
+By default, the SSH daemon listens on port 2222 of the docker host. Connect to CARiSMA from your local host with:
 
 ```bash
 ssh -X -p 2222 root@<docker-host>
 ```
 
 #### Expected results
-CARiSMA's GUI should appear on your display. The performance depends on the connection between the docker host and local host. You can create UML models, analyze them with CARiSMA checks and save the report into the 'carisma-reports' directory (imported as CARiSMA project 'carisma-reports').
+CARiSMA's GUI should appear on your local host's display. The performance depends on the connection between the docker host and local host. You can create UML models, analyze them with CARiSMA checks and save the report into the 'carisma-reports' directory (imported as CARiSMA project 'carisma-reports').
  
 ### Testing nginx
 #### Run tests
-You can check with curl, whether the example reports are available. By default the nginx server listens on port 8080 of the docker host:
+You can check with curl, whether the example reports are available. By default the nginx server listens on port 8080 of the docker host. On your local host issue:
 ```bash
 curl http://<docker-host>:8080/reports/a63868ef-634d-4f66-8f34-068e9fd17a0e.xml
 ```
 
-If you stored your own CARiSMA report into the 'carisma-reports' project of your workspace, that report should also be available.
+If you stored your own CARiSMA report into the 'carisma-reports' project of the workspace, that report should also be available.
 
 #### Expected results
 You should see an XML snippet in your terminal. The last line should be `</AnalysisResult>`
-
