@@ -16,7 +16,7 @@ git submodule init
 git submodule update
 ```
 
-Then build the two containers (carisma + dataspace-connector + mongodb) with:
+Then build the two containers (carisma + nginx) with:
 
 ```bash
 docker compose build
@@ -24,7 +24,7 @@ docker compose build
 
 ## Running instructions
 
-Copy `.env.sample` file to `.env` and adjust the values. Create an authorized_keys file that contains public SSH keys of users that should be allowed to connect to CARiSMA. Copy PDC sample configuration to production configuration. Start the containers:
+Create an `authorized_keys` file that contains public SSH keys of users that should be allowed to connect to CARiSMA. Start the containers:
 
 ```bash
 cp <your-authorized_keys> ./volumes/authorized_keys
