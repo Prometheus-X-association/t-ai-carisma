@@ -56,7 +56,7 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_Lp1kUATUEfC2Cabi3imgew" name="training server (ml algorithm)" type="_rW-qsAAiEfCxLIhNqO-dWw" association="_LpxS4ATUEfC2Cabi3imgew"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_Lp2LYATUEfC2Cabi3imgew" name="training data server (training data)" type="_spDz4ATTEfC2Cabi3imgew" association="_LpxS4ATUEfC2Cabi3imgew"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_tQs3kB8-EfCR95rP2IVlHQ" client="_G7buoAPbEfClXMrzEwwuvA" supplier="_l_cd8AAlEfCxLIhNqO-dWw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_PZVRUB9hEfCfKsHcnzLFMg" client="_l_cd8AAlEfCxLIhNqO-dWw" supplier="_G7buoAPbEfClXMrzEwwuvA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nji2kP94Ee-VcrRkm7bV4Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_njlS0P94Ee-VcrRkm7bV4Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -65,18 +65,11 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/UMLsec.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
     </profileApplication>
   </uml:Model>
-  <UMLsec:integrity xmi:id="_buvDIAAlEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:secrecy xmi:id="_buw4UAAlEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:secrecy xmi:id="_rlReAAAlEfCxLIhNqO-dWw" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:call xmi:id="_KUMCYAAmEfCxLIhNqO-dWw" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:send xmi:id="_O9Nb8AAmEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:privacy xmi:id="_aj3JEATTEfC2Cabi3imgew" base_Dependency="_ZEzxIATTEfC2Cabi3imgew"/>
-  <UMLsec:secrecy xmi:id="_aj92wATTEfC2Cabi3imgew" base_Dependency="_ZEzxIATTEfC2Cabi3imgew"/>
   <UMLsec:encrypted xmi:id="_R2UUsATUEfC2Cabi3imgew" base_CommunicationPath="_LpxS4ATUEfC2Cabi3imgew"/>
   <UMLsec:securelinks xmi:id="_OoSmgBueEfCHKNFpB3cC0A" base_Package="_cVXi8ATTEfC2Cabi3imgew"/>
   <UMLsec:securelinks xmi:id="_bjcOUBueEfCHKNFpB3cC0A" base_Package="_nh-wUP94Ee-VcrRkm7bV4Q"/>
-  <UMLsec:encrypted xmi:id="_dKjd8B8_EfCR95rP2IVlHQ" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
   <UMLsec:encrypted xmi:id="_ktSPkB8_EfCR95rP2IVlHQ" base_CommunicationPath="_FB37kAAjEfCxLIhNqO-dWw"/>
-  <UMLsec:encrypted xmi:id="_ldchMB8_EfCR95rP2IVlHQ" base_CommunicationPath="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
-  <UMLsec:integrity xmi:id="_xThXUB8_EfCR95rP2IVlHQ" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
+  <UMLsec:encrypted xmi:id="_TpjJUB9hEfCfKsHcnzLFMg" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
+  <UMLsec:integrity xmi:id="_XJrBIB9hEfCfKsHcnzLFMg" base_Dependency="_PZVRUB9hEfCfKsHcnzLFMg"/>
+  <UMLsec:LAN xmi:id="_tVClMB9jEfCfKsHcnzLFMg" base_CommunicationPath="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
 </xmi:XMI>
