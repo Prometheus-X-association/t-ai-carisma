@@ -4,21 +4,21 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_njz8UP94Ee-VcrRkm7bV4Q">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
-    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_HkA9oAAiEfCxLIhNqO-dWw" name="Web Request/ Response (HTTP/S)" memberEnd="_HkDZ4AAiEfCxLIhNqO-dWw _HkEA8AAiEfCxLIhNqO-dWw">
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_HkA9oAAiEfCxLIhNqO-dWw" memberEnd="_HkDZ4AAiEfCxLIhNqO-dWw _HkEA8AAiEfCxLIhNqO-dWw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HkCy0AAiEfCxLIhNqO-dWw" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HkCy0QAiEfCxLIhNqO-dWw" key="nature" value="UML_Nature"/>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_HkDZ4AAiEfCxLIhNqO-dWw" name="application server" type="_CuuCoAAiEfCxLIhNqO-dWw" association="_HkA9oAAiEfCxLIhNqO-dWw"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_HkEA8AAiEfCxLIhNqO-dWw" name="client" type="_-87MAAAhEfCxLIhNqO-dWw" association="_HkA9oAAiEfCxLIhNqO-dWw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_Pf3Z4AAiEfCxLIhNqO-dWw" name="Web App Query / Result" memberEnd="_Pf4oAQAiEfCxLIhNqO-dWw _Pf5PEAAiEfCxLIhNqO-dWw">
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_Pf3Z4AAiEfCxLIhNqO-dWw" memberEnd="_Pf4oAQAiEfCxLIhNqO-dWw _Pf5PEAAiEfCxLIhNqO-dWw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Pf4A8AAiEfCxLIhNqO-dWw" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Pf4oAAAiEfCxLIhNqO-dWw" key="nature" value="UML_Nature"/>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_Pf4oAQAiEfCxLIhNqO-dWw" name="storage ai model" type="_hkyjsP95Ee-VcrRkm7bV4Q" association="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_Pf5PEAAiEfCxLIhNqO-dWw" name="application server" type="_CuuCoAAiEfCxLIhNqO-dWw" association="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_FB37kAAjEfCxLIhNqO-dWw" name="Generate AI Model" memberEnd="_FB4iogAjEfCxLIhNqO-dWw _FB5JsAAjEfCxLIhNqO-dWw">
+    <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_FB37kAAjEfCxLIhNqO-dWw" memberEnd="_FB4iogAjEfCxLIhNqO-dWw _FB5JsAAjEfCxLIhNqO-dWw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_FB4ioAAjEfCxLIhNqO-dWw" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_FB4ioQAjEfCxLIhNqO-dWw" key="nature" value="UML_Nature"/>
       </eAnnotations>
@@ -49,13 +49,14 @@
       <packagedElement xmi:type="uml:Node" xmi:id="_spDz4ATTEfC2Cabi3imgew" name="Training Data Server (Training Data)">
         <deployment xmi:type="uml:Deployment" xmi:id="_HXwrIATUEfC2Cabi3imgew" client="_spDz4ATTEfC2Cabi3imgew" supplier="_UV1i8AAlEfCxLIhNqO-dWw" deployedArtifact="_UV1i8AAlEfCxLIhNqO-dWw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_LpxS4ATUEfC2Cabi3imgew" name="Read Training Data" memberEnd="_Lp1kUATUEfC2Cabi3imgew _Lp2LYATUEfC2Cabi3imgew">
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_LpxS4ATUEfC2Cabi3imgew" memberEnd="_Lp1kUATUEfC2Cabi3imgew _Lp2LYATUEfC2Cabi3imgew">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Lp09QATUEfC2Cabi3imgew" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Lp09QQTUEfC2Cabi3imgew" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_Lp1kUATUEfC2Cabi3imgew" name="training server (ml algorithm)" type="_rW-qsAAiEfCxLIhNqO-dWw" association="_LpxS4ATUEfC2Cabi3imgew"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_Lp2LYATUEfC2Cabi3imgew" name="training data server (training data)" type="_spDz4ATTEfC2Cabi3imgew" association="_LpxS4ATUEfC2Cabi3imgew"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_tQs3kB8-EfCR95rP2IVlHQ" client="_G7buoAPbEfClXMrzEwwuvA" supplier="_l_cd8AAlEfCxLIhNqO-dWw"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nji2kP94Ee-VcrRkm7bV4Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_njlS0P94Ee-VcrRkm7bV4Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -64,17 +65,18 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/UMLsec.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
     </profileApplication>
   </uml:Model>
-  <UMLsec:Internet xmi:id="_PD1d0AAlEfCxLIhNqO-dWw" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
-  <UMLsec:Internet xmi:id="_QlO_IAAlEfCxLIhNqO-dWw" base_CommunicationPath="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
-  <UMLsec:Internet xmi:id="_R_7bgAAlEfCxLIhNqO-dWw" base_CommunicationPath="_FB37kAAjEfCxLIhNqO-dWw"/>
   <UMLsec:integrity xmi:id="_buvDIAAlEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
   <UMLsec:secrecy xmi:id="_buw4UAAlEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
-  <UMLsec:integrity xmi:id="_rlQP4AAlEfCxLIhNqO-dWw" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
   <UMLsec:secrecy xmi:id="_rlReAAAlEfCxLIhNqO-dWw" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
   <UMLsec:call xmi:id="_KUMCYAAmEfCxLIhNqO-dWw" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
   <UMLsec:send xmi:id="_O9Nb8AAmEfCxLIhNqO-dWw" base_Dependency="_adsSAAAlEfCxLIhNqO-dWw"/>
   <UMLsec:privacy xmi:id="_aj3JEATTEfC2Cabi3imgew" base_Dependency="_ZEzxIATTEfC2Cabi3imgew"/>
   <UMLsec:secrecy xmi:id="_aj92wATTEfC2Cabi3imgew" base_Dependency="_ZEzxIATTEfC2Cabi3imgew"/>
-  <UMLsec:Internet xmi:id="_R2SfgATUEfC2Cabi3imgew" base_CommunicationPath="_LpxS4ATUEfC2Cabi3imgew"/>
   <UMLsec:encrypted xmi:id="_R2UUsATUEfC2Cabi3imgew" base_CommunicationPath="_LpxS4ATUEfC2Cabi3imgew"/>
+  <UMLsec:securelinks xmi:id="_OoSmgBueEfCHKNFpB3cC0A" base_Package="_cVXi8ATTEfC2Cabi3imgew"/>
+  <UMLsec:securelinks xmi:id="_bjcOUBueEfCHKNFpB3cC0A" base_Package="_nh-wUP94Ee-VcrRkm7bV4Q"/>
+  <UMLsec:encrypted xmi:id="_dKjd8B8_EfCR95rP2IVlHQ" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
+  <UMLsec:encrypted xmi:id="_ktSPkB8_EfCR95rP2IVlHQ" base_CommunicationPath="_FB37kAAjEfCxLIhNqO-dWw"/>
+  <UMLsec:encrypted xmi:id="_ldchMB8_EfCR95rP2IVlHQ" base_CommunicationPath="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
+  <UMLsec:integrity xmi:id="_xThXUB8_EfCR95rP2IVlHQ" base_Dependency="_qZ8TUAAlEfCxLIhNqO-dWw"/>
 </xmi:XMI>
