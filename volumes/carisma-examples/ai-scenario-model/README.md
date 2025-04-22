@@ -15,3 +15,9 @@ This signalizes the CARiSMA-Tool to check wheter secrecy and integrity are fullf
 Since both Nodes communicate via an encrypted internet connection (indicated by stereotypes), both integrity and secrecy are ensured and a check results in the following output :
 
 ![Report](./images/ai_scenario_report.png)
+
+Contrary, if both Nodes communicate via a simple internet connection (indicated by the <<Internet>> Stereotype), both integrity and secrecy are not ensured and a check results in the following output :
+
+![AI Scenario](./images/ai_scenario_model_fail.png)
+
+![Report](./images/ai_scenario_report_fail.png)
