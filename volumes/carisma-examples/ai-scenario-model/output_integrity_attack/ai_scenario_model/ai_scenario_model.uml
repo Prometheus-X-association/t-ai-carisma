@@ -29,10 +29,10 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_qZ8TUAAlEfCxLIhNqO-dWw" client="_fRTyAAAlEfCxLIhNqO-dWw" supplier="_l_cd8AAlEfCxLIhNqO-dWw"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_ZEzxIATTEfC2Cabi3imgew" client="_W1BiMAAlEfCxLIhNqO-dWw" supplier="_G7buoAPbEfClXMrzEwwuvA"/>
     <packagedElement xmi:type="uml:Model" xmi:id="_cVXi8ATTEfC2Cabi3imgew" name="AI Scenario">
-      <packagedElement xmi:type="uml:Node" xmi:id="_-87MAAAhEfCxLIhNqO-dWw" name="End User Computer (Browser)">
+      <packagedElement xmi:type="uml:Node" xmi:id="_-87MAAAhEfCxLIhNqO-dWw" name="End User Computer">
         <deployment xmi:type="uml:Deployment" xmi:id="_JRzV8ATUEfC2Cabi3imgew" client="_-87MAAAhEfCxLIhNqO-dWw" supplier="_fRTyAAAlEfCxLIhNqO-dWw" deployedArtifact="_fRTyAAAlEfCxLIhNqO-dWw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_CuuCoAAiEfCxLIhNqO-dWw" name="Application Server (AI Application)">
+      <packagedElement xmi:type="uml:Node" xmi:id="_CuuCoAAiEfCxLIhNqO-dWw" name="Application Server">
         <deployment xmi:type="uml:Deployment" xmi:id="_Ib0wMATUEfC2Cabi3imgew" client="_CuuCoAAiEfCxLIhNqO-dWw" supplier="_l_cd8AAlEfCxLIhNqO-dWw" deployedArtifact="_l_cd8AAlEfCxLIhNqO-dWw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Artifact" xmi:id="_G7buoAPbEfClXMrzEwwuvA" name="AI Model"/>
@@ -40,13 +40,13 @@
       <packagedElement xmi:type="uml:Artifact" xmi:id="_fRTyAAAlEfCxLIhNqO-dWw" name="Browser" fileName=""/>
       <packagedElement xmi:type="uml:Artifact" xmi:id="_UV1i8AAlEfCxLIhNqO-dWw" name="Training Data"/>
       <packagedElement xmi:type="uml:Artifact" xmi:id="_l_cd8AAlEfCxLIhNqO-dWw" name="AI Application" fileName=""/>
-      <packagedElement xmi:type="uml:Node" xmi:id="_hkyjsP95Ee-VcrRkm7bV4Q" name="AI Server (AI Model)">
+      <packagedElement xmi:type="uml:Node" xmi:id="_hkyjsP95Ee-VcrRkm7bV4Q" name="AI Server">
         <deployment xmi:type="uml:Deployment" xmi:id="_NXBSAAPbEfClXMrzEwwuvA" client="_hkyjsP95Ee-VcrRkm7bV4Q" supplier="_G7buoAPbEfClXMrzEwwuvA" deployedArtifact="_G7buoAPbEfClXMrzEwwuvA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_rW-qsAAiEfCxLIhNqO-dWw" name="Training Server (ML Algorithm)">
+      <packagedElement xmi:type="uml:Node" xmi:id="_rW-qsAAiEfCxLIhNqO-dWw" name="Training Server">
         <deployment xmi:type="uml:Deployment" xmi:id="_qne9sATTEfC2Cabi3imgew" client="_rW-qsAAiEfCxLIhNqO-dWw" supplier="_W1BiMAAlEfCxLIhNqO-dWw" deployedArtifact="_W1BiMAAlEfCxLIhNqO-dWw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Node" xmi:id="_spDz4ATTEfC2Cabi3imgew" name="Training Data Server (Training Data)">
+      <packagedElement xmi:type="uml:Node" xmi:id="_spDz4ATTEfC2Cabi3imgew" name="Training Data Server">
         <deployment xmi:type="uml:Deployment" xmi:id="_HXwrIATUEfC2Cabi3imgew" client="_spDz4ATTEfC2Cabi3imgew" supplier="_UV1i8AAlEfCxLIhNqO-dWw" deployedArtifact="_UV1i8AAlEfCxLIhNqO-dWw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_LpxS4ATUEfC2Cabi3imgew" memberEnd="_Lp1kUATUEfC2Cabi3imgew _Lp2LYATUEfC2Cabi3imgew">
