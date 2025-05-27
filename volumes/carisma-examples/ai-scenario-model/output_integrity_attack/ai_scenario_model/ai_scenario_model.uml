@@ -65,11 +65,11 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/UMLsec.uml#_kGQWQDnkEeCyb9nmG-9Lpw"/>
     </profileApplication>
   </uml:Model>
-  <UMLsec:encrypted xmi:id="_R2UUsATUEfC2Cabi3imgew" base_CommunicationPath="_LpxS4ATUEfC2Cabi3imgew"/>
   <UMLsec:securelinks xmi:id="_OoSmgBueEfCHKNFpB3cC0A" base_Package="_cVXi8ATTEfC2Cabi3imgew"/>
   <UMLsec:securelinks xmi:id="_bjcOUBueEfCHKNFpB3cC0A" base_Package="_nh-wUP94Ee-VcrRkm7bV4Q"/>
-  <UMLsec:encrypted xmi:id="_ktSPkB8_EfCR95rP2IVlHQ" base_CommunicationPath="_FB37kAAjEfCxLIhNqO-dWw"/>
-  <UMLsec:encrypted xmi:id="_TpjJUB9hEfCfKsHcnzLFMg" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
   <UMLsec:integrity xmi:id="_XJrBIB9hEfCfKsHcnzLFMg" base_Dependency="_PZVRUB9hEfCfKsHcnzLFMg"/>
   <UMLsec:LAN xmi:id="_tVClMB9jEfCfKsHcnzLFMg" base_CommunicationPath="_Pf3Z4AAiEfCxLIhNqO-dWw"/>
+  <UMLsec:Internet xmi:id="_qpGpkCG3EfCnALl7ofoxmw" base_CommunicationPath="_HkA9oAAiEfCxLIhNqO-dWw"/>
+  <UMLsec:Internet xmi:id="_r5NmkCG3EfCnALl7ofoxmw" base_CommunicationPath="_FB37kAAjEfCxLIhNqO-dWw"/>
+  <UMLsec:Internet xmi:id="_tdh5ACG3EfCnALl7ofoxmw" base_CommunicationPath="_LpxS4ATUEfC2Cabi3imgew"/>
 </xmi:XMI>
