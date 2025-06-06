@@ -23,13 +23,13 @@ In the context of Trustworthy AI assessment, it is planned to extend the approac
 
 ### Features/main functionalities
 
-- **Modelling Trustworthy AI systems:** CARiSMA utilizes the profile mechanism of the Unified Modeling Language (UML) which allows to tailor the UML to different, more specific scenarios. 
+- **Modelling Trustworthy AI systems:** CARiSMA utilizes the profile mechanism of the Unified Modeling Language (UML) which allows for the tailoring of the model to different, more specific scenarios.
   - Use Case Lead (AI Expert) models his system with the Papyrus Modeling Tool
   - Use Case Lead applies the profile delivered with CARiSMA to his model
   - Use Case Lead applies stereotypes of the profile to  selected elements of his system model
   - Use Case Lead fills the tagged values associated with the stereotypes
   - Use Case Lead applies constraints to model elements
-  - Alternatively : The profile mechanism of the CARiSMA tool allows the user to define new stereotypes, tags and constraints for UML elements of his choice
+  - Alternatively: The profile mechanism of the CARiSMA tool allows for definition new stereotypes, tags and constraints for UML elements of his choice
 - **Feedback about trust factors of AI system:** CARiSMA utilizes an Analyzer which implements a series of different analyses for different types of structure and behavioral diagrams/models. 
   - Use Case Lead (AI Expert) has finished the creation of his system with the new profile
   - Use Case Lead creates a new CARiSMA analysis file 
@@ -52,8 +52,8 @@ In the context of Trustworthy AI assessment, it is planned to extend the approac
   - Use Case Lead (AI Expert) has finished the creation of his system with the new profile
   - Use Case Lead ran a number of checks/analysis
   - Use Case Lead clicks on the created report
-  - Use Case Lead clicks on send
-  - The report gets send to the visualization BB 
+  - Optional: Use Case Lead clicks on send
+  - Optional: The report is sent to the visualization BB 
 
 ### Technical usage scenarios
 
