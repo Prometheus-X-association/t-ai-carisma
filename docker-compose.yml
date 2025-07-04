@@ -6,8 +6,7 @@ services:
       - "2222:22"
     volumes:
       - ./volumes/authorized_keys:/root/.ssh/authorized_keys:ro
-      - ./volumes/carisma-reports:/root/carisma-reports
-      - ./volumes/carisma-examples:/root/carisma-examples
+      - ./volumes/workspace:/root/workspace
       
   # TODO Needs to be isolated from outside world. Connection from outside only via PDC
   nginx:
@@ -15,7 +14,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./volumes/carisma-reports/:/usr/share/nginx/html:ro
+      - ./volumes/workspace/carisma-reports/public:/usr/share/nginx/html:ro
     environment:
-      - NGINX_HOST=carisma.ptx.uni-koblenz.de
+      # - NGINX_HOST=carisma.ptx.uni-koblenz.de
       - NGINX_PORT=80

@@ -1,6 +1,6 @@
 <Analysis>
   <name>ai_scenario_model_analysis</name>
-  <modelFile>/ai_scenario_model/ai_scenario_model.uml</modelFile>
+  <modelFile>/carisma-examples/output_integrity_attack/ai_scenario_model.uml</modelFile>
   <modelType>UML2</modelType>
   <checks>
     <Check>
