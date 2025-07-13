@@ -301,6 +301,20 @@ The component does not provide an API, since it does not receive data from other
 
 ## Test specification
 
+### Test definition
+
+
+| Test Case ID | Test Description | Prerequisites | Inputs | Expected Outcome |
+|--------------|------------------|---------------|--------|------------------|
+| TC1 | Create AI Scenario Model using Papyrus with CARiSMA Profile | Eclipse, Papyrus, and CARiSMA installed | Start Eclipse, create a new UML model with Papyrus, apply CARiSMA profile, with stereotypes, tags, and constraints | AI Scenario model with CARiSMA annotations is created and saved as `.uml` file |
+| TC2 | Create CARiSMA Analysis | A valid `.uml` model file with CARiSMA annotations | Create new CARiSMA Analysis, load `.uml` model | A `.adf` analysis file is created for a choosen model |
+| TC3 | Analyze AI Scenario Model using CARiSMA Analyzer | A `.adf` analysis file is created for a `.uml` model file with CARiSMA annotations | Open the `.adf` analysis file, select checks, and run analysis | Feedback is displayed (success or failure) based on selected checks and model definitions |
+| TC4 | Generate Analysis Report (XML format) | Analysis has been run, feedback is displayed | Click on analysis result, select "Generate XML Report"| A report file in `.xml` format is created in the directory |
+| TC5 | Generate Analysis Report (HTML format) | Analysis has been run, feedback is displayed | Click on analysis result, select "Generate HTML Report" | A report file in `.html` format is created in the directory |
+| TC6 | View an Analysis Report | A generated `.xml` or `.html` report is created | Open the report in a browser or text editor | Errors and security risks with point of occurance in the model are described |
+| TC7 | Improve Model based on Analysis Report | A `.xml` or `.html` report with errors from previous analysis of a `.uml` model | Update UML model according to error descriptions in report, rerun analysis | Updated model passes all checks; new report shows no errors |
+| TC8 | Share Analysis Report as JSON to Visualization BB | Visualization BB is ready/configured, a `.xml` or `.html` report is created | Select report, choose "Send" | Report is converted in `.json` format and sent via Connector; confirmation is shown |
+
 ### Test plan
 
 The testing strategy will include JUnit based tests of the implementation of CARiSMA (automated CI/CD pipeline via GitHub) and integration tests, covering the communication of different connectors via e.g. Postman and/or additional automated tests, therefore employing a combination of automated and manual testing methods to ensure comprehensive coverage.
