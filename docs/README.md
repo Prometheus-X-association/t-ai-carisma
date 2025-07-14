@@ -354,7 +354,7 @@ A component which enables the creation for HTML/XML/JSON-LD reports for a given 
 Test cases :
 * Verify the successful creation of a HTML report containing the accurate content for either a valid or invalid analysis
 * Verify the successful creation of a XML report containing the accurate content for either a valid or invalid analysis
-* Confirm JSON-LD reports include all required metadata and adhere to the expected structure
+* Optional: Confirm JSON-LD reports include all required metadata and adhere to the expected structure
 
 ### Integration tests
 
@@ -368,7 +368,7 @@ Test cases :
 CARiSMA's graphical user interface is based on the Eclipse IDE and Papyrus, a Eclipse based graphical UML modeling tool. Eclipse's and Papyrus's user interfaces are tested during Eclipse's or Papyrus's development, respectively. Additional UI tests of CARiSMA specific extensions are performed manually. Regularly tested are:
 
 - Analysis definition file (ADF) editor
-- Initiation of analysis report cration (export of HTML / XML report)
+- Initiation of analysis report cration (export of HTML/XML/(JSON) report)
 - CARiSMA perspective (window configuration)
 
 ## Partners & roles
@@ -378,3 +378,5 @@ This component of the building block "Trustworthy AI: Algorithm assessment" is d
 ## Usage in the dataspace
 
 While the other components of this building block and other building blocks are generally used during run time, this component of the building block "Trustworthy AI: Algorithm assessment" is used during design time. It creates useful information about the scenarios that involve AI algorithms to process personal data.
+
+Since the Prometheus-X data space is build around data and service offerings targeting educational and skill data, sharing CARiSMA's analysis results within this particular data space is not prioritized.
