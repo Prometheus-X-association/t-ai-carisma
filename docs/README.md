@@ -315,6 +315,8 @@ The component does not provide an API, since it does not receive data from other
 | TC7 | Improve Model based on Analysis Report | A `.xml` or `.html` report with errors from previous analysis of a `.uml` model | Update UML model according to error descriptions in report, rerun analysis | Updated model passes all checks; new report shows no errors |
 | TC8 | Share Analysis Report as JSON to Visualization BB | Visualization BB is ready/configured, a `.xml` or `.html` report is created | Select report, choose "Send" | Report is converted in `.json` format and sent via Connector; confirmation is shown |
 
+Depending on the final scope of this building block, TC8 is an optional test case.
+
 ### Test plan
 
 The testing strategy will include JUnit based tests of the implementation of CARiSMA (automated CI/CD pipeline via GitHub) and integration tests, covering the communication of different connectors via e.g. Postman and/or additional automated tests, therefore employing a combination of automated and manual testing methods to ensure comprehensive coverage.
