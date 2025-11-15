@@ -2,28 +2,26 @@
 
 ## Summary
 
-The LORIA and Affectlog solutions are complemented by [CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer)](https://github.com/CARiSMA-Tool/carisma-tool), developed by the University of Koblenz and Fraunhofer ISST. CARiSMA is a comprehensive open source software suite that enables system designers and security experts to perform automated compliance analyses, risk analyses and security analyses of software and system models. This allows users to consider security requirements early in the development process. Unified Modelling Language (UML) models are annotated with security-specific requirements that can be tailored to the users’ needs to cover a wide range of topics. Checks are performed on UML models, analyzing the models against the specified requirements and providing the user with detailed feedback on the models' compliance with the previously defined requirements.
+The LORIA and AffectLog solutions are complemented by [CARiSMA (CompliAnce, Risk, and Security ModelAnalyzer)](https://github.com/CARiSMA-Tool/carisma-tool), developed by the University of Koblenz and Fraunhofer ISST. CARiSMA is a comprehensive open source software suite that enables system designers and security experts to perform automated compliance analyses, risk analyses and security analyses of software and system models. This allows users to consider security requirements early in the development process. Unified Modeling Language (UML) models are annotated with security-specific requirements that can be tailored to the users’ needs to cover a wide range of topics. Checks are performed on UML models, analyzing the models against the specified requirements and providing the user with detailed feedback on the models' compliance with the previously defined requirements.
 
-In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (AI Expert) uses whithin the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
+In the context of Trustworthy AI assessment, it is planned to extend the approach to generate informative documentation that helps users to understand, how their personal data is processed within an AI Scenario. This is achieved by defining a UML extension that an Use Case Lead (AI Expert) uses within the *CARiSMA Modeler* to create an *AI Scenario Model*, which is a UML model containing additional AI specific information. The AI scenario models can be analyzed and assessed by the *CARiSMA Analyzer* regarding [AI/ML specific security issues](https://owasp.org/www-project-machine-learning-security-top-10/) as identified by the Open Worldwide Application Security Project (OWASP) community. These analyses  yield an *AI Analysis Report*, which, on the  one hand, helps the Use Case Lead to improve the scenario. On the other hand, the AI Analysis Report can then be shared with the visualization building block to present the report to the natural persons, whose personal data is processed within the AI scenario. This improves the understandability of the AI scenario and contributes to fulfill documentation obligations as defined in [EU’s AI Act](https://www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulation-on-artificial-intelligence).
 
 ## Technical usage scenarios & Features
 
 **Key functionalities:**
 
-- Ability to model Trustworthy AI systems
-- Get feedback about trust factors of AI system
-- Automatically generating reports of system for documentation purposes
-- Visualize Trustworthiness of AI systems
+The CARiSMA solution aims for a solution that allows for modeling an AI system and analyzing the system with regards to certain trustworthiness properties. These include the assessment of alignment of the modeled AI system with different security best practices, e.g. the mitigation measures defined by OWASP ML Security Top Ten or the assessment of the system with regulatory compliance with European Legislation in mind, e.g. the EU AI Act. The user (modeler / AI Expert) gets feedback about certain trust factors of the modeled AI system in the forms of automatically generated reports. These reports can be used for improving the system’s design or to generate important artifacts for documentation purposes.
 
 **Value-added:**
-
-- Increasing user's trust in AI system
-- System engineer gets a better understanding of risk in system modeling 
-- System engineer gets automated feedback about his system
+CARiSMA’s expected values added are:
+- An increase of a system engineer’s understanding of risks in an AI system under development
+- Support of improvement of security and compliance aspects of the AI system under development
+- Ultimately: Increase of users’ trust in a specific AI system
+While these properties don’t contribute directly to monetary value, the trustworthiness and regulatory compliance of an AI system form the foundation for financial returns at scale.
 
 ### Features/main functionalities
 
-- **Modelling Trustworthy AI systems:** CARiSMA utilizes the profile mechanism of the Unified Modeling Language (UML) which allows for the tailoring of the model to different, more specific scenarios.
+- **Modeling Trustworthy AI systems:** CARiSMA utilizes the profile mechanism of the Unified Modeling Language (UML) which allows for the tailoring of the model to different, more specific scenarios.
   - Use Case Lead (AI Expert) models his system with the Papyrus Modeling Tool
   - Use Case Lead applies the profile delivered with CARiSMA to his model
   - Use Case Lead applies stereotypes of the profile to  selected elements of his system model
@@ -114,7 +112,7 @@ CARiSMA is beneficial for AI system engineers:
 ### Requirements
 
 - R1. CARiSMA MUST allow an Use Case Lead (AI Expert) to create an AI scenario model
-- R2. CARiSMA MUST allow an Use Case Lead (AI Expert) to analyse the AI scenario model
+- R2. CARiSMA MUST allow an Use Case Lead (AI Expert) to analyze the AI scenario model
 - R3. CARiSMA MUST allow an Use Case Lead (AI Expert) to create an AI Analysis report
 - R4. CARiSMA MUST allow an Use Case Lead (AI Expert) to view the AI Analysis Report
 - R5. CARiSMA MUST allow an Use Case Lead (AI Expert) to improve the AI Analysis Report
@@ -128,7 +126,7 @@ Analysis results can be stored in a JSON/HTML file format and sent to the buildi
 
 ### Integrations via Connector
 
-It's planned to use a PDC to share AI Analysis Reports with the building block "distributed data visualiation".
+It's planned to use a PDC to share AI Analysis Reports with the building block "distributed data visualization".
 
 ## Relevant Standards
 
@@ -202,7 +200,7 @@ The integration of CARiSMA into the data space is illustrated in Figure 6. The c
 
 ### CARiSMA's Internal Structure
 
-The main class Carisma is registered as an Eclipse plugin and provides access to the various structures, serving as the controller for the different components of the tool.
+The main class CARiSMA is registered as an Eclipse plugin and provides access to the various structures, serving as the controller for the different components of the tool.
 
 An Analysis is executed on a Model of a certain `ModelType` registered within the `ModelTypeRegistry`. The models themselves are provided by the `ModelManager` and the `ModelLoader` for the corresponding `ModelType`.
 
@@ -214,7 +212,7 @@ The `AnalysisHost` interface provides access to this blackboard, as well as meth
 
 ![Figure 8: CARiSMA Check/Analysis Mechanism](images/check-mechanism.png)
 
-## Dynamic Behaviour
+## Dynamic Behavior
 
 The sequence diagram shows how the component communicates with other components.
 
@@ -307,11 +305,11 @@ The component does not provide an API, since it does not receive data from other
 | Test Case ID | Test Description | Prerequisites | Inputs | Expected Outcome |
 |--------------|------------------|---------------|--------|------------------|
 | TC1 | Create AI Scenario Model using Papyrus with CARiSMA Profile | Eclipse, Papyrus, and CARiSMA installed | Start Eclipse, create a new UML model with Papyrus, apply CARiSMA profile, with stereotypes, tags, and constraints | AI Scenario model with CARiSMA annotations is created and saved as `.uml` file |
-| TC2 | Create CARiSMA Analysis | A valid `.uml` model file with CARiSMA annotations | Create new CARiSMA Analysis, load `.uml` model | A `.adf` analysis file is created for a choosen model |
+| TC2 | Create CARiSMA Analysis | A valid `.uml` model file with CARiSMA annotations | Create new CARiSMA Analysis, load `.uml` model | A `.adf` analysis file is created for a chosen model |
 | TC3 | Analyze AI Scenario Model using CARiSMA Analyzer | A `.adf` analysis file is created for a `.uml` model file with CARiSMA annotations | Open the `.adf` analysis file, select checks, and run analysis | Feedback is displayed (success or failure) based on selected checks and model definitions |
 | TC4 | Generate Analysis Report (XML format) | Analysis has been run, feedback is displayed | Click on analysis result, select "Generate XML Report"| A report file in `.xml` format is created in the directory |
 | TC5 | Generate Analysis Report (HTML format) | Analysis has been run, feedback is displayed | Click on analysis result, select "Generate HTML Report" | A report file in `.html` format is created in the directory |
-| TC6 | View an Analysis Report | A generated `.xml` or `.html` report is created | Open the report in a browser or text editor | Errors and security risks with point of occurance in the model are described |
+| TC6 | View an Analysis Report | A generated `.xml` or `.html` report is created | Open the report in a browser or text editor | Errors and security risks with point of occurrence in the model are described |
 | TC7 | Improve Model based on Analysis Report | A `.xml` or `.html` report with errors from previous analysis of a `.uml` model | Update UML model according to error descriptions in report, rerun analysis | Updated model passes all checks; new report shows no errors |
 | TC8 | Share Analysis Report as JSON to Visualization BB | Visualization BB is ready/configured, a `.xml` or `.html` report is created | Select report, choose "Send" | Report is converted in `.json` format and sent via Connector; confirmation is shown |
 
@@ -330,7 +328,7 @@ Unit tests will be implemented for three newly developed components. Each test c
 An extension of the Unified Modeling Language (UML) which allows for Trustworthy AI specific annotations to a model.
 
 Test cases :
-* Verify that all neccessary element, like actions, associations and classes can be annotated with the required stereotypes.
+* Verify that all necessary element, like actions, associations and classes can be annotated with the required stereotypes.
 * Ensure that unsupported elements cannot be annotated with any stereotypes defined for Trustworthy AI specific annotations
 * Confirm that double annotated elements with the same stereotype are not possible
 * Verify that conflicting stereotype annotations are handled properly
@@ -341,7 +339,7 @@ A component which analyses a given model and gives a feedback whether the model 
 
 Test cases :
 * Verify that an analysis file can be created
-* Confirm that all Trustworthy AI specific Checks can be choosen in the CARiSMA analysis file
+* Confirm that all Trustworthy AI specific Checks can be chosen in the CARiSMA analysis file
 * Test that errors in an incorrect model are identified in the analysis file 
 * Confirm that a previously incorrect model can be modified after an analysis was conducted
 * Ensure that an altered model can be analyzed again with the newly altered content
@@ -361,22 +359,26 @@ Test cases :
 * Verify that all API endpoints respond correctly to valid requests 
 * Test behavior for invalid requests, for example with unauthorized access
 * Confirm that endpoints maintain expected performance under high load conditions
-* Validate the correct communication between neccessary endpoints
+* Validate the correct communication between necessary endpoints
 
 ### UI test (where relevant)
 
 CARiSMA's graphical user interface is based on the Eclipse IDE and Papyrus, a Eclipse based graphical UML modeling tool. Eclipse's and Papyrus's user interfaces are tested during Eclipse's or Papyrus's development, respectively. Additional UI tests of CARiSMA specific extensions are performed manually. Regularly tested are:
 
 - Analysis definition file (ADF) editor
-- Initiation of analysis report cration (export of HTML/XML/(JSON) report)
+- Initiation of analysis report creation (export of HTML/XML/(JSON) report)
 - CARiSMA perspective (window configuration)
 
 ## Partners & roles
 
-This component of the building block "Trustworthy AI: Algorithm assessment" is developed by University of Koblenz and the associated partner Fraunhofer ISST. It complements the AI algorithm assessment approaches of LORIA and Affectlog. For the integration with the building block "distributed data visualization", cooperation with HeadAI, Institut Mines Telecom and Visions may become necessary.
+This component of the building block "Trustworthy AI: Algorithm assessment" is developed by University of Koblenz and the associated partner Fraunhofer ISST. It complements the AI algorithm assessment approaches of LORIA and AffectLog. For the integration with the building block "distributed data visualization", cooperation with HeadAI, Institut Mines Telecom and Visions may become necessary.
 
-## Usage in the dataspace
+## Usage in the data space
 
 While the other components of this building block and other building blocks are generally used during run time, this component of the building block "Trustworthy AI: Algorithm assessment" is used during design time. It creates useful information about the scenarios that involve AI algorithms to process personal data.
 
 Since the Prometheus-X data space is build around data and service offerings targeting educational and skill data, sharing CARiSMA's analysis results within this particular data space is not prioritized.
+
+<!-- Local Variables: -->
+<!-- jinx-local-words: "AffectLog BBs Istack Namespace OSGi OpenAPI OpenPGP Prefs di ld mXparser mxparser pre uml xstream" -->
+<!-- End: -->
