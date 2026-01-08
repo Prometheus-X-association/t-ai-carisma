@@ -1,0 +1,75 @@
+## WiP 
+
+- ML01:2023 Input Manipulation Attack, <<InputManipulationAttackPrevention>> zB
+  - Adversarial training: <<AI Model>> ohne {AdversarialTraining} --> Input Manipulation potenziell möglich
+  - Robust models: <<AI Model>> ohne {AdversarialTraining} UND ohne {DefenseMechanisms} --> Input Manipulation potenziell möglich
+  - Input validation: <<AI Application>> ohne {InputValidation} --> Input Manipulation potenziell möglich 
+- ML02:2023 Data Poisoning Attack, zB:
+  - Data validation and verification: <<Training Data>> ohne {Validation&Verification} -> Data poisoning möglich
+  - Secure Data Storage: <<Training Data Server>> ohne {SecureDataStorage} --> Data poisoning möglich
+  - Data separation: <<Training Data>> auf selbem Node wie <<AI Model>> -> Data poisoning möglich
+  - Access Control: <<Training Data>> ohne {AccessControl} -> Data poisoning möglich
+  - Monitoring & Audit (nah an Anomaly Detection): <<Training Data>> ohne {RegularMonitoringAndAudit} -> Data poisoning möglich
+  - Model Validation: <<AI Model>> ohne {Validation} -> Data poisoning möglich
+  - Model ensembles: <<AI Model>> ohne {EnsembleModel} --> Data poisoning möglich
+  - Anomaly Detection: <<Training Data>> ohne {AnomalyDetection} -> Data poisoning möglich
+- ML03:2023 Model Inversion Attack, zB:
+  - Generell: <<AI Model>>, <<Training Data>> und <<AI Algorithm>> mit {Public}-> Model Inversion ist keine Bedrohung
+  - Access Control: <<AI Model>> hat kein {AccessControl} -> Model Inversion möglich (public führt immer zu positivem check)
+  - Input Validation: <<AI Application>> ohne {InputValidation} --> Model Inversion möglich 
+  - Model transparency: <<AI Model>> ohne {Transparency} --> Warning, no Error --> Model Inversion möglich
+  - Regular monitoring: <<AI Model>> ohne {AnomalyDetection} -> Model Inversion möglich
+  - Model Retraining: <<AI Model>> ohne {RegularRetraining} -> Model Inversion möglich
+- ML04:2023 Membership Inference Attack, zB
+  - Generell: <<Training Data>> mit {Public} (oder CommunucationPath between Knoten mit <<TrainingData>> und anderen Knoten erfüllen kein <<secrecy>>) --> Membership Inference ohne Angriff möglich, Angreifer schaut sich direkt die Tranings-Daten an
+  - Model Training on randomized or shuffled data: <<AI Algorithm>> ohne {Randomize Data} --> Membership Inference Attack möglich
+  - Model Obfuscation: <<AI Model>> ohne {Obfuscation} --> Membership Inference Attack möglich
+  - Regularisation: <<AI Algorithm>> ohne {Regularisation} --> Membership Inference Attack möglich
+  - Reducing the training data: <<Training Data>> ohne {Reduced} --> Membership Inference Attack möglich
+  - Testing and Monitoring: <<AI Model>> ohne {RegularTestingAndMonitoring} --> Membership Inference Attack wird einfacher
+- ML05:2023 Model Theft, zB:
+  - Generell: <<AI Model>> ist {Public} (oder CommunicationPath zwischen Knoten mit <<AI Model>> und <<AI Algorithm>> erfüllt <<secrecy>>-Anforderung nicht) -> Model Theft ohne Angriff möglich
+  - Access Control:
+    -  <<AI Model>> hat kein {AccessControl} -> Model Theft möglich
+    -  <<Training Data>> und <<AI Algorithm>> haben kein {AccessControl} -> Model Theft evtl. möglich
+  - Regular Backups: 
+    - <<AI Model>> ohne {RegularBackup} -> Model Theft evtl. möglich
+    - <<TrainingData>> ohne {RegularBackup} -> Model Theft evtl. möglich
+  - Model Obfuscation: <<AI Model>> ohne {Obfuscation} --> Model Theft möglich
+  - Watermarking: <<AI Model>> ohne {Watermarking} --> Model Theft möglich, aber traceable
+  - Legal Protection: <<AI Model>> ohne {Protection} --> Model Theft möglich, aber traceable
+  - Monitoring and auditing: <<AI Model>> ohne {RegularMonitoringAndAudit}--> Model Theft möglich, aber traceable
+- ML06:2023 AI Supply Chain Attacks, zB
+  - <<SecureAIScenario>> mit min 1 unchecked Attribut --> AI Supply Chain Attack möglich
+    - Verify Package Signatures
+    - Use Secure Package Repositories
+    - Keep Packages Up-to-date
+    - Use Virtual Environments
+    - Perform Code Reviews
+    - Use Package Verification Tools
+    - Educate Developers
+- ML07:2023 Transfer Learning Attack
+  - Regularly monitor and update the training datasets: <<TrainingData>> ohne {RegularUpdatesAndTraining}
+  - Use secure and trusted training datasets: <<Training Data>> ohne {Secure/Trusted} --> Transfer Learning Attack möglich
+  - Model Isolation: <<AI Model>>, <<AIAlgorithm>> und <<TrainingData>> auf selbem Knoten deployed -> Transfer Learning Attack möglich
+  - Differential Privacy: <<AI Model>> ohne {DifferentialPrivacy} -> Transfer Learning Attack möglich
+  - Perform Regular Security Audits (???): <<SecureAIScenario>> ohne {RegularSecurityAudits} -> Transfer Learning Attack möglich
+- ML08:2023 Model Skewing
+  - Generell: <<FeedbackData>> nicht vorhanden -> Model Skewing nicht möglich
+  - Access control: <<AI Model>> und <<FeedbackData>> ohne {AccessControl} -> Model Skewing nicht möglich
+  - Verify authenticity of feedback data: <<FeedbackData>> ohne {AuthenticityVerified}  -> Model Skewing nicht möglich
+  - Use data validation and cleaning techniques: <<FeedbackData>> ohne {Validation} und {Cleaning}
+  - Implement anomaly detection: <<FeedbackData>> ohne {AnomalyDetection}
+  - Regularly monitor the model's performance: <<AI Model>> ohne {RegularPerformanceMonitoring}
+  - Continously train the model: <<AI Model>> ohne {RegularRetraining}
+- ML09:2023 Output Integrity Attack, zB:
+  - Using crypto: <<AI Application>> ohne {CheckModelResultAuthenticity}
+  - Secure Communication Channels: CommunicationPath zwischen Knoten mit <<AI Model>> und <<AI Application Server>> erfüllt nicht <<integrity>> und <<secrecy>> -> Output Integrity Attack möglich
+  - Input validation: <<AI Application>> ohne {InputValidation} --> Output Integrity Attack möglich
+  - Tamper-evident logs: <<AI Application>> ohne {TamperEvidentLogging}
+  - Regular software updates: <<SecureAIScenario>> ohne {RegularUpdates} --> Output Integrity Attack möglich
+  - Monitoring and auditing: Dependency zwischen <<AI Application>> und <<AI Model>> ohne {RegularMonitoringAndAudit} -> Output Integrity Attack möglich
+- ML10:2023 Model Poisoning, zB:
+  - Regularisation: <<AI Algorithm>> ohne {Regularisation} --> Model poisoning möglich
+  - Robust model design: <<AI Model>> ohne {RobustArchitecture} und {RobustActivationFunction}
+  - Cryptographic techniques: <<AI Model>> hat {CryptographicallySecured} -> Model poisoning möglich
