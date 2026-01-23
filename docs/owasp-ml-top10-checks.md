@@ -65,7 +65,7 @@
   - Secure Communication Channels: CommunicationPath zwischen Knoten mit <<ML Model>> und <<AI Application Server>> erfüllt nicht <<integrity>> und <<secrecy>> -> Output Integrity Attack möglich
   - Input validation: <<AI Application>> ohne {InputValidation} --> Output Integrity Attack möglich
   - Tamper-evident logs: <<AI Application>> ohne {TamperEvidentLogging}
-  - Regular software updates: <<SecureAIScenario>> ohne {RegularUpdates} --> Output Integrity Attack möglich
+  - Regular software updates: <<SecureAIScenario>> ohne {RegularPackageUpdates} --> Output Integrity Attack möglich
   - Monitoring and auditing: Dependency zwischen <<AI Application>> und <<ML Model>> ohne {RegularMonitoringAndAudit} -> Output Integrity Attack möglich
 - ML10:2023 Model Poisoning, zB:
   - Regularisation: <<AI Algorithm>> ohne {Regularisation} --> Model poisoning möglich
