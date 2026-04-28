@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mltop10="http:///schemas/mltop10/_D-LEcDaWEfGL8tg-8tfbTA/7" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/mltop10/_D-LEcDaWEfGL8tg-8tfbTA/7 pathmap://UMLsec/mltop10.uml#_D-MSkDaWEfGL8tg-8tfbTA">
+  <uml:Model xmi:id="_ChSZQELXEfGW-cIgSYHuiQ" name="membership-inference-example">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Ckk90ELXEfGW-cIgSYHuiQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GG5OAELXEfGW-cIgSYHuiQ" name="Example Scenario">
+      <packagedElement xmi:type="uml:Device" xmi:id="_LjARYELXEfGW-cIgSYHuiQ" name="End User Computer">
+        <deployment xmi:type="uml:Deployment" xmi:id="_QpPLYELXEfGW-cIgSYHuiQ" client="_LjARYELXEfGW-cIgSYHuiQ" supplier="_Ml540ELXEfGW-cIgSYHuiQ" deployedArtifact="_Ml540ELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Device" xmi:id="_L2enAELXEfGW-cIgSYHuiQ" name="Application Server">
+        <deployment xmi:type="uml:Deployment" xmi:id="_RJ2lIELXEfGW-cIgSYHuiQ" client="_L2enAELXEfGW-cIgSYHuiQ" supplier="_M0ZAwELXEfGW-cIgSYHuiQ" deployedArtifact="_M0ZAwELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Device" xmi:id="_MFM_gELXEfGW-cIgSYHuiQ" name="AI Server">
+        <deployment xmi:type="uml:Deployment" xmi:id="_Sq5hIELXEfGW-cIgSYHuiQ" client="_MFM_gELXEfGW-cIgSYHuiQ" supplier="_NFbtcELXEfGW-cIgSYHuiQ" deployedArtifact="_NFbtcELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_Ml540ELXEfGW-cIgSYHuiQ" name="Some Browser"/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_M0ZAwELXEfGW-cIgSYHuiQ" name="Some AI Application"/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_NFbtcELXEfGW-cIgSYHuiQ" name="Some ML Model"/>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_UYj80ELXEfGW-cIgSYHuiQ" memberEnd="_UYnnMELXEfGW-cIgSYHuiQ _UYoOQELXEfGW-cIgSYHuiQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UYmZEELXEfGW-cIgSYHuiQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UYnAIELXEfGW-cIgSYHuiQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UYnnMELXEfGW-cIgSYHuiQ" name="device2" type="_L2enAELXEfGW-cIgSYHuiQ" association="_UYj80ELXEfGW-cIgSYHuiQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_UYoOQELXEfGW-cIgSYHuiQ" name="device1" type="_LjARYELXEfGW-cIgSYHuiQ" association="_UYj80ELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_U2X6MELXEfGW-cIgSYHuiQ" memberEnd="_U2ZIUULXEfGW-cIgSYHuiQ _U2ZIUkLXEfGW-cIgSYHuiQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U2YhQELXEfGW-cIgSYHuiQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U2ZIUELXEfGW-cIgSYHuiQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_U2ZIUULXEfGW-cIgSYHuiQ" name="device3" type="_MFM_gELXEfGW-cIgSYHuiQ" association="_U2X6MELXEfGW-cIgSYHuiQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_U2ZIUkLXEfGW-cIgSYHuiQ" name="device2" type="_L2enAELXEfGW-cIgSYHuiQ" association="_U2X6MELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_VUsN4ELXEfGW-cIgSYHuiQ" client="_Ml540ELXEfGW-cIgSYHuiQ" supplier="_M0ZAwELXEfGW-cIgSYHuiQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_W-L7QELXEfGW-cIgSYHuiQ" client="_M0ZAwELXEfGW-cIgSYHuiQ" supplier="_NFbtcELXEfGW-cIgSYHuiQ"/>
+      <packagedElement xmi:type="uml:Device" xmi:id="_dL728ELXEfGW-cIgSYHuiQ" name="Training Server">
+        <deployment xmi:type="uml:Deployment" xmi:id="_oHovgELXEfGW-cIgSYHuiQ" client="_dL728ELXEfGW-cIgSYHuiQ" supplier="_iJL0EELXEfGW-cIgSYHuiQ" deployedArtifact="_iJL0EELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Device" xmi:id="_euIpgELXEfGW-cIgSYHuiQ" name="Training Data Server">
+        <deployment xmi:type="uml:Deployment" xmi:id="_pYqSgELXEfGW-cIgSYHuiQ" client="_euIpgELXEfGW-cIgSYHuiQ" supplier="_i7rA8ELXEfGW-cIgSYHuiQ" deployedArtifact="_i7rA8ELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_f2gm0ELXEfGW-cIgSYHuiQ" memberEnd="_f2hN4kLXEfGW-cIgSYHuiQ _f2h08ELXEfGW-cIgSYHuiQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_f2hN4ELXEfGW-cIgSYHuiQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_f2hN4ULXEfGW-cIgSYHuiQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_f2hN4kLXEfGW-cIgSYHuiQ" name="device11" type="_dL728ELXEfGW-cIgSYHuiQ" association="_f2gm0ELXEfGW-cIgSYHuiQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_f2h08ELXEfGW-cIgSYHuiQ" name="device3" type="_MFM_gELXEfGW-cIgSYHuiQ" association="_f2gm0ELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:CommunicationPath" xmi:id="_gUZcsELXEfGW-cIgSYHuiQ" memberEnd="_gUaDwkLXEfGW-cIgSYHuiQ _gUaq0ELXEfGW-cIgSYHuiQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gUaDwELXEfGW-cIgSYHuiQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gUaDwULXEfGW-cIgSYHuiQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gUaDwkLXEfGW-cIgSYHuiQ" name="device11" type="_dL728ELXEfGW-cIgSYHuiQ" association="_gUZcsELXEfGW-cIgSYHuiQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gUaq0ELXEfGW-cIgSYHuiQ" name="device12" type="_euIpgELXEfGW-cIgSYHuiQ" association="_gUZcsELXEfGW-cIgSYHuiQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_iJL0EELXEfGW-cIgSYHuiQ" name="Some ML Training Algo"/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_i7rA8ELXEfGW-cIgSYHuiQ" name="Some TrainingData"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ljGWMELXEfGW-cIgSYHuiQ" client="_i7rA8ELXEfGW-cIgSYHuiQ" supplier="_iJL0EELXEfGW-cIgSYHuiQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_mGewEELXEfGW-cIgSYHuiQ" client="_iJL0EELXEfGW-cIgSYHuiQ" supplier="_NFbtcELXEfGW-cIgSYHuiQ"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_IbiKIELXEfGW-cIgSYHuiQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ibo30ELXEfGW-cIgSYHuiQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLsec/mltop10.uml#_D-MSkDaWEfGL8tg-8tfbTA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UMLsec/mltop10.uml#_6ufFsPVCEfCR7r3VmXr6IQ"/>
+    </profileApplication>
+  </uml:Model>
+  <mltop10:SecureAIScenario xmi:id="_KAmDcELXEfGW-cIgSYHuiQ" base_Package="_GG5OAELXEfGW-cIgSYHuiQ"/>
+  <mltop10:AIApplication xmi:id="_bPUZQELXEfGW-cIgSYHuiQ" base_Artifact="_M0ZAwELXEfGW-cIgSYHuiQ"/>
+  <mltop10:MLModel xmi:id="_cV5m0ELXEfGW-cIgSYHuiQ" base_Artifact="_NFbtcELXEfGW-cIgSYHuiQ" Obfuscation="true" RegularTestingAndMonitoring="true"/>
+  <mltop10:AIAlgorithm xmi:id="_uIdpgELXEfGW-cIgSYHuiQ" base_Artifact="_iJL0EELXEfGW-cIgSYHuiQ" Randomize="true" Regularisation="true"/>
+  <mltop10:TrainingData xmi:id="_vBrwgELXEfGW-cIgSYHuiQ" base_Artifact="_i7rA8ELXEfGW-cIgSYHuiQ" Reduced="true"/>
+</xmi:XMI>
