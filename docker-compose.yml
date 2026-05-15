@@ -1,7 +1,11 @@
 services:
   
   carisma:
-    build: ./carisma-tool/docker/remote
+    build:
+      context: ./carisma-tool/docker/remote
+      args:
+        # You can overwrite the CARiSMA release to use
+        # CARISMA_RELEASE_URL: https://github.com/CARiSMA-Tool/carisma-tool/releases/latest/download/carisma-product-linux.gtk.x86_64.tar.gzcarisma-product-linux.gtk.x86_64.tar.gz
     ports:
       - "2222:22"
     volumes:
